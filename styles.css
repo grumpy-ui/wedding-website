@@ -1,0 +1,341 @@
+body {
+  margin: 0;
+  padding: 0;
+  font-family: "Montserrat", sans-serif;
+  background-image: url(./images/background.jpg);
+  color: #444; /* A softer black for the text */
+}
+
+header {
+  /* background-color: #ffefd5; A soft peach color */
+  color: #6d4c41; /* A color that complements the background */
+  padding: 2em 0;
+  text-align: center;
+}
+
+/* Base styles for the navbar */
+nav {
+  background-color: #6d4c41; /* Adjust the color to fit your theme */
+  color: white;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Optional: adds a subtle shadow for depth */
+  position: fixed; /* Keeps the navbar at the top of the viewport */
+  width: 100%; /* Ensures it extends full width */
+  z-index: 1000; /* Ensures it stacks above other content */
+}
+
+nav ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex; /* Flexbox for horizontal layout */
+  justify-content: center; /* Centers the menu items */
+  align-items: center;
+}
+
+nav li {
+  padding: 1em; /* Adds space around each menu item */
+}
+
+nav a {
+  color: white;
+  text-decoration: none;
+  text-transform: uppercase; /* Optional: adds an aesthetic touch with uppercase letters */
+  font-weight: bold;
+}
+/* Hamburger menu bars */
+.nav-toggle {
+  cursor: pointer;
+  padding: 1em;
+  display: none; /* Hidden by default, will be displayed in media query below */
+}
+
+/* Styling the bars in the hamburger menu */
+.nav-toggle .bar {
+  display: block;
+  width: 30px;
+  height: 3px;
+  background-color: #fff;
+  margin: 6px auto;
+  transition: 0.4s;
+}
+
+/* Animation for hamburger menu transformation into 'X' */
+.nav-toggle.active .bar:nth-child(2) {
+  opacity: 0;
+}
+
+.nav-toggle.active .bar:nth-child(1) {
+  transform: translateY(9px) rotate(45deg);
+}
+
+.nav-toggle.active .bar:nth-child(3) {
+  transform: translateY(-9px) rotate(-45deg);
+}
+
+/* Show the toggle button on smaller screens */
+
+/* This will hide the list items and display the dropdown button on smaller screens */
+@media (max-width: 768px) {
+  nav ul {
+    flex-direction: column; /* Stacks the menu items vertically */
+    display: none; /* Hide the menu items by default */
+    position: absolute; /* Position the menu absolutely within the relative parent */
+    background-color: #6d4c41; /* Background color of the dropdown */
+    right: 0; /* Align the dropdown to the right */
+    top: 60px; /* Position below the nav bar */
+    width: 100%; /* Full width */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Shadow for the dropdown */
+  }
+
+  nav ul li {
+    text-align: center; /* Center text for list items */
+    width: 100%; /* Full width for list items */
+    padding: 12px 0; /* Padding for list items */
+  }
+
+  nav ul li a {
+    width: 100%; /* Full width for links */
+    display: block; /* Display block for links to take up full list item space */
+  }
+
+  /* Styles for the dropdown button */
+  .nav-toggle {
+    display: block; /* Show the toggle button on small screens */
+    position: absolute; /* Position it absolutely to the parent */
+    top: 0;
+    right: 0;
+    background-color: #6d4c41;
+    padding: 1em;
+    cursor: pointer;
+  }
+
+  /* Rotate toggle icon when active */
+  .nav-toggle.active .bar {
+    background: white; /* Color of the bar */
+  }
+
+  /* When the navbar is toggled, display the menu items */
+  .nav-toggle.active + ul {
+    display: flex; /* Show the menu items */
+  }
+}
+
+/* Toggle button bars for the hamburger icon */
+.bar {
+  display: block; /* Display block for the bars */
+  width: 25px; /* Width of the bars */
+  height: 3px; /* Height of the bars */
+  margin: 5px auto; /* Margin for the bars */
+  -webkit-transition: all 0.3s ease-in-out; /* Transition for the bars */
+  transition: all 0.3s ease-in-out; /* Transition for the bars */
+  background-color: #fff; /* Color of the bars */
+}
+
+.content {
+  max-width: 800px;
+  margin: 100px auto; /* Increased top margin to account for fixed navigation */
+  padding: 2em;
+  background: #fff;
+  border-radius: 10px;
+  box-shadow: 0 2px 15px rgba(0, 0, 0, 0.1); /* A more pronounced shadow for depth */
+}
+
+/* Updated countdown timer styles */
+.countdown-container {
+  margin: 2em auto;
+  padding: 1em;
+  background-color: #fafafa; /* A very light gray for subtle contrast */
+  border: 1px solid #f0f0f0; /* A light border for definition */
+  border-radius: 5px;
+}
+/* Countdown Timer Styles */
+#countdown {
+  font-size: 2em; /* Increase the font size */
+  color: #6d4c41; /* Choose a color that fits the wedding theme */
+  background-color: rgba(255, 255, 255, 0.8); /* Semi-transparent background */
+  border-radius: 10px; /* Rounded corners */
+  display: inline-block; /* Helps with centering */
+  padding: 20px; /* Add some padding around the text */
+  margin: 20px 0; /* Add some space above and below */
+  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1); /* Subtle shadow for depth */
+  text-align: center; /* Center the text inside the box */
+}
+
+/* General Section Styles for Consistency */
+section {
+  padding: 50px 0; /* Ample padding for each section */
+  text-align: center; /* Center align the content */
+}
+
+/* Styling the surrounding container of the countdown to control its width */
+.countdown-container {
+  max-width: 600px; /* Maximum width of the container */
+  margin: auto; /* Center the container on the page */
+  text-align: center; /* Center align the text */
+}
+
+/* Ensure the design is responsive */
+@media (max-width: 768px) {
+  #countdown {
+    font-size: 1.5em; /* Smaller font size on mobile */
+    padding: 15px; /* Adjust padding on mobile */
+  }
+}
+
+@media (max-width: 768px) {
+  header {
+    padding: 1em 0;
+  }
+
+  .content,
+  .countdown-container {
+    margin-top: 150px; /* More space on top for the mobile view */
+    padding: 1em;
+  }
+
+  nav ul li a {
+    padding: 10px; /* Smaller padding for nav items on mobile */
+  }
+}
+
+#about {
+  background-color: transparent; /* Change this to the color you prefer */
+  color: #444; /* A soft color for the text */
+  padding: 50px 0; /* Ample padding for aesthetic spacing */
+  text-align: center; /* Center-align the text */
+}
+
+.about-container {
+  max-width: 800px; /* A reasonable max-width for readability */
+  margin: auto; /* Center the container */
+  padding: 25px; /* Padding inside the container */
+  background: #f9f9f9; /* Slightly off-white background for the container */
+  border-radius: 15px; /* Rounded corners for a softer look */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* A subtle shadow for depth */
+}
+
+.about-container h2 {
+  margin-top: 0; /* Remove the top margin from the heading */
+  color: #6d4c41; /* A color that stands out */
+  font-family: "Playfair Display", serif; /* An elegant serif font */
+  margin-bottom: 20px; /* Space after the heading */
+}
+
+.about-container p {
+  font-size: 18px; /* Larger font size for readability */
+  line-height: 1.6; /* Space between the lines for readability */
+  margin-bottom: 20px; /* Space after each paragraph */
+}
+
+.about-photo {
+  max-width: 100%; /* Ensure the image is responsive and doesn't overflow */
+  height: auto; /* Maintain aspect ratio */
+  margin-bottom: 20px; /* Space after the image */
+  border-radius: 10px; /* Slightly rounded corners for the image */
+}
+@media (max-width: 768px) {
+  .about-container {
+    padding: 15px;
+  }
+
+  .about-container h2 {
+    font-size: 24px; /* Slightly smaller font size for mobile */
+  }
+
+  .about-container p {
+    font-size: 16px; /* Adjust font size for mobile for better readability */
+  }
+}
+
+#rsvp {
+  background-color: transparent;
+  padding: 50px 0;
+  text-align: center;
+}
+
+.rsvp-container {
+  max-width: 600px;
+  margin: auto;
+  padding: 25px;
+  background: #f9f9f9;
+  border-radius: 15px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.rsvp-container h2 {
+  font-family: "Playfair Display", serif;
+  color: #6d4c41;
+  margin-bottom: 20px;
+}
+
+.rsvp-container p {
+  font-size: 18px;
+  line-height: 1.6;
+  margin-bottom: 30px;
+}
+
+#rsvp-form .form-group {
+  margin-bottom: 15px;
+  text-align: left;
+}
+
+#rsvp-form label {
+  display: block;
+  margin-bottom: 5px;
+}
+
+#rsvp-form input[type="text"],
+#rsvp-form input[type="tel"],
+#rsvp-form input[type="number"],
+#rsvp-form textarea {
+  width: 100%;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+
+#rsvp-form input[type="radio"] {
+  margin-right: 5px;
+}
+
+#rsvp-form button {
+  background-color: #6d4c41;
+  color: white;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 18px;
+}
+
+#rsvp-form button:hover {
+  background-color: #8b5a2b;
+}
+
+@media (max-width: 768px) {
+  .rsvp-container {
+    padding: 15px;
+  }
+
+  #rsvp-form label,
+  #rsvp-form input[type="text"],
+  #rsvp-form input[type="email"],
+  #rsvp-form input[type="number"],
+  #rsvp-form textarea,
+  #rsvp-form button {
+    font-size: 16px; /* Adjust font size for better readability on mobile */
+  }
+}
+
+/* Initial state of sections with the 'fade-in' class */
+.fade-in {
+  opacity: 0;
+  transform: translateY(20px);
+  transition: opacity 0.6s ease-out, transform 0.6s ease-out;
+}
+
+/* State of sections when they are in view */
+.in-view {
+  opacity: 1;
+  transform: translateY(0);
+}

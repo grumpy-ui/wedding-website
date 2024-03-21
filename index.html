@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Our Wedding</title>
+    <link rel="stylesheet" href="styles.css" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&family=Montserrat:wght@400&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <nav>
+      <div class="nav-toggle">
+        <div class="bar"></div>
+        <div class="bar"></div>
+        <div class="bar"></div>
+      </div>
+      <ul>
+        <li><a href="#home">Acasa</a></li>
+        <li><a href="#about">Povestea noastra</a></li>
+        <li><a href="#gallery">Galerie</a></li>
+        <li><a href="#rsvp">Confirma prezenta</a></li>
+      </ul>
+    </nav>
+
+    <header>
+      <!-- <div class="container">
+            <h1>Our Wedding</h1>
+        </div> -->
+    </header>
+    <section class="content" id="home">
+      <div class="countdown-container">
+        <h2>Numaratoarea inversa</h2>
+        <div id="countdown"></div>
+      </div>
+      <div class="container">
+        <h2>Welcome to Our Wedding Website</h2>
+        <p>
+          We are thrilled to invite you to celebrate our special day with us!
+        </p>
+        <p>
+          Save the date and join us for a day filled with love, joy, and
+          happiness.
+        </p>
+        <p>Stay tuned for more updates!</p>
+      </div>
+    </section>
+    <section id="home">
+      <!-- Home content goes here -->
+    </section>
+
+    <section id="rsvp" class="fade-in">
+      <div class="rsvp-container">
+        <h2>Confirma prezenta</h2>
+        <form id="rsvp-form">
+          <div class="form-group">
+            <label for="name">Nume:</label>
+            <input type="text" id="name" name="name" required />
+          </div>
+          <div class="form-group">
+            <label for="phone">Numar de telefon:</label>
+            <input type="tel" id="phone" name="phone" required />
+          </div>
+          <div class="form-group">
+            <label>Ne vedem?</label>
+            <div>
+              <input
+                type="radio"
+                id="yes"
+                name="attendance"
+                value="yes"
+                checked
+              />
+              <label for="yes">Da</label>
+            </div>
+            <div>
+              <input type="radio" id="no" name="attendance" value="no" />
+              <label for="no">Nu</label>
+            </div>
+          </div>
+          <div class="form-group">
+            <label for="guests">Cati o sa fiti?</label>
+            <input
+              type="number"
+              id="guests"
+              name="guests"
+              min="1"
+              max="10"
+              required
+            />
+          </div>
+          <div class="form-group">
+            <label for="message">Trimite-ne un mesaj (optional):</label>
+            <textarea id="message" name="message"></textarea>
+          </div>
+          <button type="submit">Confirma</button>
+        </form>
+      </div>
+    </section>
+
+    <section id="about" class="fade-in">
+      <div class="about-container">
+        <h2>Despre noi</h2>
+        <p>We're just two lost souls swimming in a fish bowl</p>
+        <!-- <p>Our journey...</p> -->
+        <img src="./images/IMG_1316.jpeg" alt="Our Photo" class="about-photo" />
+        <p>Now we're taking the next step...</p>
+      </div>
+    </section>
+
+    <section id="gallery">
+      <!-- Gallery content goes here -->
+    </section>
+
+    <section id="rsvp">
+      <!-- RSVP content goes here -->
+    </section>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="script.js"></script>
+  </body>
+</html>
