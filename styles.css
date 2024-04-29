@@ -7,49 +7,49 @@ body {
 }
 
 header {
-  /* background-color: #ffefd5; A soft peach color */
-  color: #6d4c41; /* A color that complements the background */
+
+  color: #6d4c41; 
   padding: 2em 0;
   text-align: center;
 }
 
-/* Base styles for the navbar */
+
 nav {
-  background-color: #6d4c41; /* Adjust the color to fit your theme */
+  background-color: #6d4c41; 
   color: white;
-  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Optional: adds a subtle shadow for depth */
-  position: fixed; /* Keeps the navbar at the top of the viewport */
-  width: 100%; /* Ensures it extends full width */
-  z-index: 1000; /* Ensures it stacks above other content */
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); 
+  position: fixed; 
+  width: 100%; 
+  z-index: 1000; 
 }
 
 nav ul {
   list-style: none;
   padding: 0;
   margin: 0;
-  display: flex; /* Flexbox for horizontal layout */
-  justify-content: center; /* Centers the menu items */
+  display: flex; 
+  justify-content: center; 
   align-items: center;
 }
 
 nav li {
-  padding: 1em; /* Adds space around each menu item */
+  padding: 1em; 
 }
 
 nav a {
   color: white;
   text-decoration: none;
-  text-transform: uppercase; /* Optional: adds an aesthetic touch with uppercase letters */
+  text-transform: uppercase; 
   font-weight: bold;
 }
-/* Hamburger menu bars */
+
 .nav-toggle {
   cursor: pointer;
   padding: 1em;
-  display: none; /* Hidden by default, will be displayed in media query below */
+  display: none; 
 }
 
-/* Styling the bars in the hamburger menu */
+
 .nav-toggle .bar {
   display: block;
   width: 30px;
@@ -59,7 +59,7 @@ nav a {
   transition: 0.4s;
 }
 
-/* Animation for hamburger menu transformation into 'X' */
+
 .nav-toggle.active .bar:nth-child(2) {
   opacity: 0;
 }
@@ -72,36 +72,34 @@ nav a {
   transform: translateY(-9px) rotate(-45deg);
 }
 
-/* Show the toggle button on smaller screens */
 
-/* This will hide the list items and display the dropdown button on smaller screens */
 @media (max-width: 768px) {
   nav ul {
-    flex-direction: column; /* Stacks the menu items vertically */
-    display: none; /* Hide the menu items by default */
-    position: absolute; /* Position the menu absolutely within the relative parent */
-    background-color: #6d4c41; /* Background color of the dropdown */
-    right: 0; /* Align the dropdown to the right */
-    top: 60px; /* Position below the nav bar */
-    width: 100%; /* Full width */
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Shadow for the dropdown */
+    flex-direction: column; 
+    display: none; 
+    position: absolute; 
+    background-color: #6d4c41; 
+    right: 0; 
+    top: 60px; 
+    width: 100%; 
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); 
   }
 
   nav ul li {
-    text-align: center; /* Center text for list items */
-    width: 100%; /* Full width for list items */
-    padding: 12px 0; /* Padding for list items */
+    text-align: center; 
+    width: 100%; 
+    padding: 12px 0; 
   }
 
   nav ul li a {
-    width: 100%; /* Full width for links */
-    display: block; /* Display block for links to take up full list item space */
+    width: 100%; 
+    display: block; 
   }
 
-  /* Styles for the dropdown button */
+
   .nav-toggle {
-    display: block; /* Show the toggle button on small screens */
-    position: absolute; /* Position it absolutely to the parent */
+    display: block; 
+    position: absolute; 
     top: 0;
     right: 0;
     background-color: #6d4c41;
@@ -109,69 +107,69 @@ nav a {
     cursor: pointer;
   }
 
-  /* Rotate toggle icon when active */
+
   .nav-toggle.active .bar {
-    background: white; /* Color of the bar */
+    background: white;
   }
 
-  /* When the navbar is toggled, display the menu items */
+
   .nav-toggle.active + ul {
-    display: flex; /* Show the menu items */
+    display: flex; 
   }
 }
 
-/* Toggle button bars for the hamburger icon */
+
 .bar {
-  display: block; /* Display block for the bars */
-  width: 25px; /* Width of the bars */
-  height: 3px; /* Height of the bars */
-  margin: 5px auto; /* Margin for the bars */
-  -webkit-transition: all 0.3s ease-in-out; /* Transition for the bars */
-  transition: all 0.3s ease-in-out; /* Transition for the bars */
-  background-color: #fff; /* Color of the bars */
+  display: block; 
+  width: 25px; 
+  height: 3px; 
+  margin: 5px auto; 
+  -webkit-transition: all 0.3s ease-in-out; 
+  transition: all 0.3s ease-in-out; 
+  background-color: #fff; 
 }
 
 .content {
   max-width: 800px;
-  margin: 100px auto; /* Increased top margin to account for fixed navigation */
+  margin: 100px auto; 
   padding: 2em;
   background: #fff;
   border-radius: 10px;
-  box-shadow: 0 2px 15px rgba(0, 0, 0, 0.1); /* A more pronounced shadow for depth */
+  box-shadow: 0 2px 15px rgba(0, 0, 0, 0.1); 
 }
 
-/* Updated countdown timer styles */
+
 .countdown-container {
   margin: 2em auto;
   padding: 1em;
-  background-color: #fafafa; /* A very light gray for subtle contrast */
-  border: 1px solid #f0f0f0; /* A light border for definition */
+  background-color: #fafafa; 
+  border: 1px solid #f0f0f0; 
   border-radius: 5px;
 }
-/* Countdown Timer Styles */
+
 #countdown {
-  font-size: 2em; /* Increase the font size */
-  color: #6d4c41; /* Choose a color that fits the wedding theme */
-  background-color: rgba(255, 255, 255, 0.8); /* Semi-transparent background */
-  border-radius: 10px; /* Rounded corners */
-  display: inline-block; /* Helps with centering */
-  padding: 20px; /* Add some padding around the text */
-  margin: 20px 0; /* Add some space above and below */
-  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1); /* Subtle shadow for depth */
-  text-align: center; /* Center the text inside the box */
+  font-size: 2em;
+  color: #6d4c41; 
+  background-color: rgba(255, 255, 255, 0.8); 
+  border-radius: 10px; 
+  display: inline-block; 
+  padding: 20px; 
+  margin: 20px 0; 
+  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1); 
+  text-align: center; 
 }
 
-/* General Section Styles for Consistency */
+
 section {
-  padding: 50px 0; /* Ample padding for each section */
-  text-align: center; /* Center align the content */
+  padding: 50px 0; 
+  text-align: center; 
 }
 
-/* Styling the surrounding container of the countdown to control its width */
+
 .countdown-container {
-  max-width: 600px; /* Maximum width of the container */
-  margin: auto; /* Center the container on the page */
-  text-align: center; /* Center align the text */
+  max-width: 600px; 
+  margin: auto; 
+  text-align: center; 
 }
 
 /* Ensure the design is responsive */
