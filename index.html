@@ -14,83 +14,85 @@
     <script src="script.js" defer></script>
   </head>
   <body>
-    <header class="header">
-      <img
-        class="logo"
-        alt="lauradu logo"
-        src="./images/logo_transparent.PNG"
-      />
-      <nav class="main-nav">
-        <ul class="main-nav-list">
-          <li><a class="main-nav-link" href="#">Despre noi</a></li>
-          <li><a class="main-nav-link" href="#">Galerie</a></li>
-          <li><a class="main-nav-link" href="#">Povestea noastra</a></li>
-          <li><a class="main-nav-link" href="#">Locatie</a></li>
-          <li>
-            <a class="main-nav-link nav-cta" href="#">Confirma prezenta</a>
-          </li>
-        </ul>
-      </nav>
-    </header>
-    <main>
-      <section class="section-hero">
-        <div class="hero">
-          <div class="hero-text-box">
-            <h1 class="heading-primary">Esti invitat la nunta noastra!</h1>
-            <div class="countdown-container">
-              <p class="date">9 Noiembrie 2024</p>
-              <div id="countdown"></div>
-            </div>
-            <!-- <p class="hero-description">
+    <div class="main">
+      <header class="header">
+        <img
+          class="logo"
+          alt="lauradu logo"
+          src="./images/logo_transparent.PNG"
+        />
+        <nav class="main-nav">
+          <ul class="main-nav-list">
+            <li><a class="main-nav-link" href="#">Despre noi</a></li>
+            <li><a class="main-nav-link" href="#">Galerie</a></li>
+            <li><a class="main-nav-link" href="#">Povestea noastra</a></li>
+            <li><a class="main-nav-link" href="#">Locatie</a></li>
+            <li>
+              <a class="main-nav-link nav-cta" href="#">Confirma prezenta</a>
+            </li>
+          </ul>
+        </nav>
+      </header>
+      <main>
+        <section class="section-hero">
+          <div class="hero">
+            <div class="hero-text-box">
+              <h1 class="heading-primary">Esti invitat la nunta noastra!</h1>
+              <div class="countdown-container">
+                <p class="date">9 Noiembrie 2024</p>
+                <div id="countdown"></div>
+              </div>
+              <!-- <p class="hero-description">
               Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do
               eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut
               enim ad minim veniam, quis nostrud exercitation ullamco laboris
               nisi ut aliquip ex ea commodo consequat.
             </p> -->
-            <a href="#" class="btn btn--full margin-right-sm"
-              >Confirma prezenta</a
+              <a href="#" class="btn btn--full margin-right-sm"
+                >Confirma prezenta</a
+              >
+              <a href="#" class="btn btn--outline">Locatie &darr;</a>
+            </div>
+            <div class="hero-img-box">
+              <img src="./images/hero_2.png" class="hero-img" />
+            </div>
+          </div>
+        </section>
+        <section class="section-despre-noi">
+          <div class="container">
+            <span class="heading-secondary cine-sunt-mirii"
+              >Cine sunt mirii?</span
             >
-            <a href="#" class="btn btn--outline">Locatie &darr;</a>
+            <!-- <h2 class="heading-secondary">Cine sunt mirii?</h2> -->
           </div>
-          <div class="hero-img-box">
-            <img src="./images/hero_2.png" class="hero-img" />
+          <div class="container grid grid--2-cols">
+            <div class="step-text-box">
+              <p class="nume-miri">Laura</p>
+              <p class="descriere-miri">
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do
+                eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut
+                enim ad minim veniam, quis nostrud exercitation ullamco laboris
+                nisi ut aliquip ex ea commodo consequat.
+              </p>
+            </div>
+            <div class="step-image-box">
+              <img src="./images/despre_noi_laura.PNG" class="step-img" />
+            </div>
+            <div class="step-image-box">
+              <img src="./images/despre_noi_radu.PNG" class="step-img" />
+            </div>
+            <div class="step-text-box">
+              <p class="nume-miri">Radu</p>
+              <p class="descriere-miri">
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do
+                eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut
+                enim ad minim veniam, quis nostrud exercitation ullamco laboris
+                nisi ut aliquip ex ea commodo consequat.
+              </p>
+            </div>
           </div>
-        </div>
-      </section>
-      <section class="section-despre-noi">
-        <div class="container">
-          <span class="heading-secondary cine-sunt-mirii"
-            >Cine sunt mirii?</span
-          >
-          <!-- <h2 class="heading-secondary">Cine sunt mirii?</h2> -->
-        </div>
-        <div class="container grid grid--2-cols">
-          <div class="step-text-box">
-            <p class="nume-miri">Laura</p>
-            <p class="descriere-miri">
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do
-              eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut
-              enim ad minim veniam, quis nostrud exercitation ullamco laboris
-              nisi ut aliquip ex ea commodo consequat.
-            </p>
-          </div>
-          <div class="step-image-box">
-            <img src="./images/despre_noi_laura.PNG" class="step-img" />
-          </div>
-          <div class="step-image-box">
-            <img src="./images/despre_noi_radu.PNG" class="step-img" />
-          </div>
-          <div class="step-text-box">
-            <p class="nume-miri">Radu</p>
-            <p class="descriere-miri">
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do
-              eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut
-              enim ad minim veniam, quis nostrud exercitation ullamco laboris
-              nisi ut aliquip ex ea commodo consequat.
-            </p>
-          </div>
-        </div>
-      </section>
-    </main>
+        </section>
+      </main>
+    </div>
   </body>
 </html>
