@@ -9,7 +9,7 @@ html {
 }
 
 body {
-  font-family: "Inter", sans-serif;
+  font-family: "Dancing Script", sans-serif;
   line-height: 1;
   font-weight: 400;
   color: #555;
@@ -65,18 +65,36 @@ body {
   background-color: #cf711f;
 }
 
-.heading-primary {
-  font-size: 5.2rem;
+.heading-primary,
+.heading-secondary {
   font-weight: 700;
-  line-height: 1.05;
   color: #333;
-  margin-bottom: 3.2rem;
   letter-spacing: -0.5px;
 }
 
+.heading-primary {
+  font-size: 5.2rem;
+  line-height: 1.05;
+  margin-bottom: 3.2rem;
+} 
+
+.heading-secondary {
+  font-size: 4.4rem;
+  line-height: 1.2;
+  margin-bottom: 9.6rem;
+}
+
+/* .subheading {
+
+  display: block;
+  font-size: 2rem;
+  font-weight: 500;
+  color: #e67e22;
+} */
+
 .section-hero {
   background-color: #fdf2e9;
-  
+
   /* background-image: url(./images/background_2.jpg); */
   padding: 4.8rem 0 9.6rem 0;
 }
@@ -144,18 +162,22 @@ body {
 
 .section-despre-noi {
   padding: 9.6rem 0;
-
 }
 
 .grid {
   display: grid;
   gap: 9.6rem;
-  
+}
+
+.container {
+  max-width: 120rem;
+  margin: 0 auto;
+  padding: 0 3.2rem;
 }
 
 .grid--2-cols {
   grid-template-columns: repeat(2, 1fr);
-} 
+}
 
 .grid--3-cols {
   grid-template-columns: repeat(3, 1fr);
@@ -165,10 +187,10 @@ body {
   grid-template-columns: repeat(4, 1fr);
 }
 
-
-.section-despre-noi div {
-  padding: 100px;
-  font-size: 50px;
+.section-despre-noi {
+  padding: 9.6rem 0;
+  /* background-color: #989e8b; */
+  /* background-image: url(./images/background_4.jpg);S */
 }
 
 .countdown-container {
@@ -177,15 +199,37 @@ body {
   /* background-color: #fafafa; 
   border: 1px solid #f0f0f0;  */
   border-radius: 15px;
+  justify-content: center;
 }
-
 #countdown {
   font-size: 2rem;
-  color: #6d4c41; 
-  /* background-color: rgba(255, 255, 255, 0.8);  */
-  border-radius: 10px; 
-  display: inline-block; 
-  padding: 2rem; 
-  margin: 2rem 0; 
-  text-align: center; 
+  color: #6d4c41;
+  border-radius: 10px;
+  display: inline-block;
+  margin: 2rem 0;
+  text-align: center;
+}
+
+.step-img {
+  width: 50%;
+}
+
+.nume-miri {
+  font-size: 7.8rem;
+  font-weight: 600;
+  color: #333;
+}
+
+.descriere-miri {
+  font-size: 2.3rem;
+  margin-top: 1.4rem;
+}
+
+.cine-sunt-mirii {
+  text-align: center;
+  display: block;
+}
+
+.date {
+  font-size: 2.3rem;
 }
