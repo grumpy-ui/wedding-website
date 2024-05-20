@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Laura si Radu</title>
     <link rel="stylesheet" href="styles.css" />
+    <link rel="stylesheet" href="queries.css" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
@@ -12,7 +13,7 @@
       rel="stylesheet"
     />
     <script src="script.js" defer></script>
-    <script src="queries.css"></script>
+   
     <script
       type="module"
       src="https://unpkg.com/ionicons@5.4.0/dist/ionicons/ionicons.esm.js"
@@ -25,49 +26,58 @@
   <body>
     <div>
       <div class="main">
-        <header class="header">
-          <img
-            class="logo"
-            alt="lauradu logo"
-            src="./images/logo_transparent.PNG"
-          />
-          <nav class="main-nav">
-            <ul class="main-nav-list">
-              <li><a class="main-nav-link" href="#">Despre noi</a></li>
-              <li><a class="main-nav-link" href="#">Galerie</a></li>
-              <li><a class="main-nav-link" href="#">Povestea noastra</a></li>
-              <li><a class="main-nav-link" href="#">Locatie</a></li>
-              <li>
-                <a class="main-nav-link nav-cta" href="#">Confirma prezenta</a>
-              </li>
-            </ul>
-          </nav>
-        </header>
         <main>
-          <section class="section-hero">
-            <div class="hero">
-              <div class="hero-text-box">
-                <h1 class="heading-primary">Esti invitat la nunta noastra!</h1>
-                <div class="countdown-container">
-                  <p class="date">9 Noiembrie 2024</p>
-                  <div id="countdown"></div>
-                </div>
-                <!-- <p class="hero-description">
+          <div class="intro rounded-borders">
+            <header class="header">
+              <img
+                class="logo"
+                alt="lauradu logo"
+                src="./images/logo_transparent.PNG"
+              />
+              <nav class="main-nav">
+                <ul class="main-nav-list">
+                  <li><a class="main-nav-link" href="#">Despre noi</a></li>
+                  <li><a class="main-nav-link" href="#">Galerie</a></li>
+                  <li>
+                    <a class="main-nav-link" href="#">Povestea noastra</a>
+                  </li>
+                  <li><a class="main-nav-link" href="#">Locatie</a></li>
+                  <li>
+                    <a class="main-nav-link nav-cta" href="#"
+                      >Confirma prezenta</a
+                    >
+                  </li>
+                </ul>
+              </nav>
+              <button class="btn-mobile-nav">
+                <ion-icon class="icon-mobile-nav" name="menu-outline"></ion-icon>
+                <ion-icon class="icon-mobile-nav" name="close-outline"></ion-icon>
+              </button>
+            </header>
+            <section class="section-hero">
+              <div class="hero">
+                <div class="hero-text-box">
+                  <h1 class="heading-primary">
+                    Esti invitat la nunta noastra!
+                  </h1>
+                  <div class="countdown-container">
+                    <p class="date">9 Noiembrie 2024</p>
+                    <div id="countdown"></div>
+                  </div>
+                  <!-- <p class="hero-description">
               Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do
               eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut
               enim ad minim veniam, quis nostrud exercitation ullamco laboris
               nisi ut aliquip ex ea commodo consequat.
             </p> -->
-                <a href="#" class="btn btn--full margin-right-sm"
-                  >Confirma prezenta</a
-                >
-                <a href="#" class="btn btn--outline">Locatie &darr;</a>
+                  <a href="#" class="btn btn--full margin-right-sm"
+                    >Confirma prezenta</a
+                  >
+                  <a href="#" class="btn btn--outline">Locatie &darr;</a>
+                </div>
               </div>
-              <div class="hero-img-box">
-                <img src="./images/hero_2.png" class="hero-img" />
-              </div>
-            </div>
-          </section>
+            </section>
+          </div>
           <section class="section-despre-noi rounded-borders">
             <div class="container">
               <span class="heading-secondary cine-sunt-mirii"
@@ -85,10 +95,10 @@
                   laboris nisi ut aliquip ex ea commodo consequat.
                 </p>
               </div>
-              <div class="step-image-box">
+              <div class="step-image-box laura-img">
                 <img src="./images/despre_noi_laura.PNG" class="step-img" />
               </div>
-              <div class="step-image-box">
+              <div class="step-image-box radu-img">
                 <img src="./images/despre_noi_radu.PNG" class="step-img" />
               </div>
               <div class="step-text-box">
@@ -102,6 +112,7 @@
               </div>
             </div>
           </section>
+          <section class="gallery rounded-borders"></section>
           <section class="section-cta">
             <div class="container">
               <div class="cta rounded-borders">
