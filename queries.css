@@ -75,7 +75,8 @@
 
   .main-nav {
     background-color: rgba(255, 255, 255, 0.97);
-    position: absolute;
+    /*enabling absolute position overflows the element*/
+    /* position: absolute; */
     top: 0;
     left: 0;
     width: 100%;
@@ -105,12 +106,9 @@
 }
 
 @media (max-width: 34rem) {
-  body {
-    overflow-x: hidden;
-  }
-
   .main {
     margin: 0 2.3rem;
+    overflow-x: hidden;
   }
   .grid {
     row-gap: 4.8rem;
@@ -128,6 +126,10 @@
   }
   .section-hero {
     padding: 2.4rem 0 6.4rem 0;
+  }
+
+  .section-despre-noi {
+    max-width: 100%;
   }
 
   .hero {
@@ -149,5 +151,9 @@
   .cta-img-box {
     height: 32rem;
     grid-row: 1;
+  }
+
+  .step-img-box {
+    transform: translateY(2.4rem);
   }
 }
