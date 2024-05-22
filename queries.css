@@ -156,4 +156,13 @@
   .step-img-box {
     transform: translateY(2.4rem);
   }
+
+  .gallery {
+    grid-template-columns: repeat(4, 1fr);
+    gap: 1.2rem;
+  }
+
+  .btn--gallery {
+    grid-column: span 4;
+  }
 }

@@ -11,9 +11,11 @@
 
 html {
   font-size: 62.5%;
+  overflow-x: hidden;
 }
 
 body {
+  width: 100%;
   font-family: "Dancing Script", sans-serif;
   line-height: 1;
   font-weight: 400;
@@ -25,6 +27,7 @@ body {
   background-position: center;
   margin: 0;
   padding: 0;
+  overflow-x: hidden;
 }
 
 .intro {
@@ -153,7 +156,7 @@ body {
 
 .hero {
   display: flex;
-  max-width: 130rem;
+  /* max-width: 130rem; */
   margin: 0 auto;
   padding: 0 3.2rem;
   gap: 9.6rem;
@@ -186,7 +189,7 @@ body {
   background-color: #c67f43;
 }
 
-.btn--form {
+.btn--form, .btn--gallery {
   background-color: #45260a;
   color: #fdf2e9;
   padding: 1.2rem;
@@ -374,4 +377,35 @@ body {
   align-items: center;
   justify-content: center;
   gap: 1rem;
+}
+
+.gallery {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 1.6rem;
+  padding: 2.6rem;
+  background-image: linear-gradient(to left, #7b876d, #eb984e);
+}
+
+.gallery-heading {
+  grid-column:span 4;
+}
+
+.gallery-item {
+  overflow: hidden;
+  box-shadow: 10px 10px 15px 5px;
+}
+
+.gallery-item img {
+  display: block;
+  width: 100%;
+  transition: all 0.4s;
+}
+
+.gallery-item:hover {
+  transform: scale(1.1);
+}
+
+.btn--gallery {
+  grid-column: 4;
 }
