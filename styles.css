@@ -195,7 +195,7 @@ body {
   padding: 1.2rem;
 }
 
-.btn--form:hover {
+.btn--form:hover, .btn--gallery:hover {
   background-color: #fff;
   color: #555;
 }
@@ -408,4 +408,5 @@ body {
 
 .btn--gallery {
   grid-column: 4;
+  font-family: sans-serif;
 }
