@@ -402,7 +402,6 @@ body {
   box-shadow: 10px 10px 15px 5px;
 }
 
-
 .gallery-item:hover {
   transform: scale(1.1);
 }
@@ -420,8 +419,8 @@ body {
 
 .carousel-item img {
   object-fit: cover;
-  width: 100%;
-  height: 60vh; /* Adjust this value as needed for your design */
+  width: 90%;
+  height: 90vh; /* Adjust this value as needed for your design */
 }
 
 
@@ -451,5 +450,3 @@ body {
 .carousel-control-next {
   width: 5%;
 }
-
-
