@@ -29,6 +29,10 @@
     padding: 0 3.2rem;
   }
 
+  .carousel-item img {
+    height: 80vh; /* Adjust this value as needed for larger screens */
+  }
+
   .main-nav-list {
     gap: 3.2rem;
   }
@@ -157,6 +161,16 @@
     transform: translateY(2.4rem);
   }
 
+  .carousel-control-prev,
+  .carousel-control-next {
+    width: 10%;
+  }
+
+  .carousel-item img {
+    height: 70vh; /* Adjust this value as needed for larger screens */
+  }
+
+
   .gallery {
     grid-template-columns: repeat(4, 1fr);
     gap: 1.2rem;
@@ -165,4 +179,6 @@
   .btn--gallery {
     grid-column: span 4;
   }
+  
 }
+
