@@ -30,85 +30,81 @@
     ></script>
   </head>
   <body>
-      <script
-        src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
-        integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
-        crossorigin="anonymous"
-      ></script>
-      <div class="main">
-        <main>
-          <div class="intro rounded-borders">
-            <header class="header">
-              <img
-                class="logo"
-                alt="lauradu logo"
-                src="./images/logo_transparent.PNG"
-              />
-              <nav class="main-nav">
-                <ul class="main-nav-list">
-                  <li><a class="main-nav-link" href="#">Despre noi</a></li>
-                  <li><a class="main-nav-link" href="#">Galerie</a></li>
-                  <li>
-                    <a class="main-nav-link" href="#">Povestea noastra</a>
-                  </li>
-                  <li><a class="main-nav-link" href="#">Locatie</a></li>
-                  <li>
-                    <a class="main-nav-link nav-cta" href="#"
-                      >Confirma prezenta</a
-                    >
-                  </li>
-                </ul>
-              </nav>
-              <button class="btn-mobile-nav">
-                <ion-icon
-                  class="icon-mobile-nav"
-                  name="menu-outline"
-                ></ion-icon>
-                <ion-icon
-                  class="icon-mobile-nav"
-                  name="close-outline"
-                ></ion-icon>
-              </button>
-            </header>
-            <section class="section-hero">
-              <div class="hero">
-                <div class="hero-text-box">
-                  <h1 class="heading-primary">
-                    Esti invitat la nunta noastra!
-                  </h1>
-                  <div class="countdown-container">
-                    <p class="date">9 Noiembrie 2024</p>
-                    <div id="countdown"></div>
-                  </div>
-                  <!-- <p class="hero-description">
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
+      crossorigin="anonymous"
+    ></script>
+    <div class="main">
+      <main>
+        <div class="intro rounded-borders">
+          <header class="header">
+            <img
+              class="logo"
+              alt="lauradu logo"
+              src="./images/logo_transparent.PNG"
+            />
+            <nav class="main-nav">
+              <ul class="main-nav-list">
+                <li><a class="main-nav-link" href="#">Despre noi</a></li>
+                <li><a class="main-nav-link" href="#">Galerie</a></li>
+                <li>
+                  <a class="main-nav-link" href="#">Povestea noastra</a>
+                </li>
+                <li><a class="main-nav-link" href="#">Locatie</a></li>
+                <li>
+                  <a class="main-nav-link nav-cta" href="#"
+                    >Confirma prezenta</a
+                  >
+                </li>
+              </ul>
+            </nav>
+            <button class="btn-mobile-nav">
+              <ion-icon class="icon-mobile-nav" name="menu-outline"></ion-icon>
+              <ion-icon class="icon-mobile-nav" name="close-outline"></ion-icon>
+            </button>
+          </header>
+          <section class="section-hero">
+            <div class="hero">
+              <div class="hero-text-box">
+                <h1 class="heading-primary">Esti invitat la nunta noastra!</h1>
+                <div class="countdown-container">
+                  <p class="date">9 Noiembrie 2024</p>
+                  <div id="countdown"></div>
+                </div>
+                <!-- <p class="hero-description">
               Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do
               eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut
               enim ad minim veniam, quis nostrud exercitation ullamco laboris
               nisi ut aliquip ex ea commodo consequat.
             </p> -->
-                  <a href="#" class="btn btn--full margin-right-sm"
-                    >Confirma prezenta</a
-                  >
-                  <button
-                    href="#"
-                    class="btn btn--outline btn--contact"
-                    data-bs-toggle="modal"
-                    data-bs-target="#contactModal"
-                  >
-                    Contacteaza-ne &darr;
-                  </button>
-                </div>
+                <a href="#" class="btn btn--full margin-right-sm"
+                  >Confirma prezenta</a
+                >
+                <button
+                  href="#"
+                  class="btn btn--outline btn--contact"
+                  data-bs-toggle="modal"
+                  data-bs-target="#contactModal"
+                >
+                  Contacteaza-ne &darr;
+                </button>
               </div>
-            </section>
-          </div>
-          <section class="section-despre-noi rounded-borders">
-            <div class="container">
-              <span class="heading-secondary cine-sunt-mirii"
-                >Cine sunt mirii?</span
-              >
-              <!-- <h2 class="heading-secondary">Cine sunt mirii?</h2> -->
             </div>
-            <div class="container grid grid--2-cols">
+          </section>
+        </div>
+        <section class="section-despre-noi rounded-borders">
+          <div class="container despre-noi-header">
+            <span class="heading-secondary cine-sunt-mirii"
+              >Cine sunt mirii?</span
+            >
+            <div class="switch-buttons">
+              <p class="btn-radu">Radu</p>
+              <p class="btn-laura active">Laura</p>
+            </div>
+          </div>
+          <div class="container grid grid--1-col">
+            <div class="laura">
               <div class="step-text-box">
                 <p class="nume-miri">Laura</p>
                 <p class="descriere-miri">
@@ -121,9 +117,8 @@
               <div class="step-image-box laura-img">
                 <img src="./images/despre_noi_laura.PNG" class="step-img" />
               </div>
-              <div class="step-image-box radu-img">
-                <img src="./images/despre_noi_radu.PNG" class="step-img" />
-              </div>
+            </div>
+            <div class="radu hide">
               <div class="step-text-box">
                 <p class="nume-miri">Radu</p>
                 <p class="descriere-miri">
@@ -132,189 +127,191 @@
                   Ut enim ad minim veniam, quis nostrud exercitation ullamco
                   laboris nisi ut aliquip ex ea commodo consequat.
                 </p>
+                <div class="step-image-box radu-img">
+                  <img src="./images/despre_noi_radu.PNG" class="step-img" />
+                </div>
               </div>
             </div>
-          </section>
-          <section class="section-cta">
-            <div class="container">
-              <div class="cta rounded-borders">
-                <div class="cta-text-box">
-                  <h2 class="heading-secondary">Confirma prezenta:</h2>
-                  <p class="cta-text"></p>
-                  <form class="cta-form">
-                    <label for="nume-prenume">Nume si Prenume</label>
-                    <input
-                      id="nume-prenume"
-                      type="text"
-                      placeholder="Nume si prenume"
-                    />
-                    <label for="telefon">Numar de telefon</label>
-                    <input
-                      id="telefon"
-                      type="number"
-                      placeholder="Numar de telefon"
-                    />
-                    <div class="adulti-copii">
-                      <div class="input-containter">
-                        <label for="adulti">Adulti</label>
-                        <input
-                          id="adulti"
-                          type="number"
-                          placeholder="Adulti"
-                          min="0"
-                        />
-                      </div>
-                      <div class="input-containter">
-                        <label for="copii">Copii</label>
-                        <input
-                          id="copii"
-                          type="number"
-                          placeholder="(sub 13 ani)"
-                          min="0"
-                        />
-                      </div>
+          </div>
+        </section>
+        <section class="section-cta">
+          <div class="container">
+            <div class="cta rounded-borders">
+              <div class="cta-text-box">
+                <h2 class="heading-secondary">Confirma prezenta:</h2>
+                <p class="cta-text"></p>
+                <form class="cta-form">
+                  <label for="nume-prenume">Nume si Prenume</label>
+                  <input
+                    id="nume-prenume"
+                    type="text"
+                    placeholder="Nume si prenume"
+                  />
+                  <label for="telefon">Numar de telefon</label>
+                  <input
+                    id="telefon"
+                    type="number"
+                    placeholder="Numar de telefon"
+                  />
+                  <div class="adulti-copii">
+                    <div class="input-containter">
+                      <label for="adulti">Adulti</label>
+                      <input
+                        id="adulti"
+                        type="number"
+                        placeholder="Adulti"
+                        min="0"
+                      />
                     </div>
-                    <button class="btn btn--form">Confirma</button>
-                  </form>
-                </div>
-                <div
-                  class="cta-img-box"
-                  role="img"
-                  aria-label="photo of autumn flowers"
-                ></div>
+                    <div class="input-containter">
+                      <label for="copii">Copii</label>
+                      <input
+                        id="copii"
+                        type="number"
+                        placeholder="(sub 13 ani)"
+                        min="0"
+                      />
+                    </div>
+                  </div>
+                  <button class="btn btn--form">Confirma</button>
+                </form>
               </div>
+              <div
+                class="cta-img-box"
+                role="img"
+                aria-label="photo of autumn flowers"
+              ></div>
             </div>
-          </section>
-          <section class="section-gallery rounded-borders">
-            <div class="container">
-              <span class="heading-secondary gallery-heading"
-                >Astia suntem</span
-              >
-              <div id="carouselExampleIndicators" class="carousel slide">
-                <div class="carousel-indicators">
-                  <button
-                    type="button"
-                    data-bs-target="#carouselExampleIndicators"
-                    data-bs-slide-to="0"
-                    class="active"
-                    aria-current="true"
-                    aria-label="Slide 1"
-                  ></button>
-                  <button
-                    type="button"
-                    data-bs-target="#carouselExampleIndicators"
-                    data-bs-slide-to="1"
-                    aria-label="Slide 2"
-                  ></button>
-                  <button
-                    type="button"
-                    data-bs-target="#carouselExampleIndicators"
-                    data-bs-slide-to="2"
-                    aria-label="Slide 3"
-                  ></button>
-                  <button
-                    type="button"
-                    data-bs-target="#carouselExampleIndicators"
-                    data-bs-slide-to="3"
-                    aria-label="Slide 4"
-                  ></button>
-                </div>
-                <div class="carousel-inner">
-                  <div class="carousel-item active">
-                    <img
-                      src="./images/gallery/gallery-8.JPEG"
-                      class="d-block w-100"
-                      alt="..."
-                    />
-                  </div>
-                  <div class="carousel-item">
-                    <img
-                      src="./images/gallery/gallery-9.JPEG"
-                      class="d-block w-100"
-                      alt="..."
-                    />
-                  </div>
-                  <div class="carousel-item">
-                    <img
-                      src="./images/gallery/gallery-11.JPEG"
-                      class="d-block w-100"
-                      alt="..."
-                    />
-                  </div>
-                  <div class="carousel-item">
-                    <img
-                      src="./images/gallery/gallery-13.JPEG"
-                      class="d-block w-100"
-                      alt="..."
-                    />
-                  </div>
-                </div>
+          </div>
+        </section>
+        <section class="section-gallery rounded-borders">
+          <div class="container">
+            <span class="heading-secondary gallery-heading">Astia suntem</span>
+            <div id="carouselExampleIndicators" class="carousel slide">
+              <div class="carousel-indicators">
                 <button
-                  class="carousel-control-prev"
                   type="button"
                   data-bs-target="#carouselExampleIndicators"
-                  data-bs-slide="prev"
-                >
-                  <span
-                    class="carousel-control-prev-icon"
-                    aria-hidden="true"
-                  ></span>
-                  <span class="visually-hidden">Previous</span>
-                </button>
+                  data-bs-slide-to="0"
+                  class="active"
+                  aria-current="true"
+                  aria-label="Slide 1"
+                ></button>
                 <button
-                  class="carousel-control-next"
                   type="button"
                   data-bs-target="#carouselExampleIndicators"
-                  data-bs-slide="next"
-                >
-                  <span
-                    class="carousel-control-next-icon"
-                    aria-hidden="true"
-                  ></span>
-                  <span class="visually-hidden">Next</span>
-                </button>
+                  data-bs-slide-to="1"
+                  aria-label="Slide 2"
+                ></button>
+                <button
+                  type="button"
+                  data-bs-target="#carouselExampleIndicators"
+                  data-bs-slide-to="2"
+                  aria-label="Slide 3"
+                ></button>
+                <button
+                  type="button"
+                  data-bs-target="#carouselExampleIndicators"
+                  data-bs-slide-to="3"
+                  aria-label="Slide 4"
+                ></button>
               </div>
-            </div>
-          </section>
-        </main>
-      </div>
-      <div
-        class="modal fade"
-        id="contactModal"
-        tabindex="-1"
-        aria-labelledby="contactModalLabel"
-        aria-hidden="true"
-      >
-        <div class="modal-dialog modal-dialog-centered">
-          <div class="modal-content">
-            <div class="modal-header">
-              <h5 class="modal-title" id="contactModalLabel">Contacteaza-ne</h5>
+              <div class="carousel-inner">
+                <div class="carousel-item active">
+                  <img
+                    src="./images/gallery/gallery-8.JPEG"
+                    class="d-block w-100"
+                    alt="..."
+                  />
+                </div>
+                <div class="carousel-item">
+                  <img
+                    src="./images/gallery/gallery-9.JPEG"
+                    class="d-block w-100"
+                    alt="..."
+                  />
+                </div>
+                <div class="carousel-item">
+                  <img
+                    src="./images/gallery/gallery-11.JPEG"
+                    class="d-block w-100"
+                    alt="..."
+                  />
+                </div>
+                <div class="carousel-item">
+                  <img
+                    src="./images/gallery/gallery-13.JPEG"
+                    class="d-block w-100"
+                    alt="..."
+                  />
+                </div>
+              </div>
               <button
+                class="carousel-control-prev"
                 type="button"
-                class="close"
-                data-bs-dismiss="modal"
-                aria-label="close"
-              ></button>
-            </div>
-            <div class="modal-body">
-              <p class="modal-contact-name heading-secondary">
-                Radu: <a href="tel:+40771567728">0771567728</a>
-              </p>
-              <p class="modal-contact-name heading-secondary">
-                Laura: <a href="tel:+40757339435">0757339435</a>
-              </p>
-            </div>
-            <div class="modal-footer">
-              <button
-                type="button"
-                class="btn--close-modal"
-                data-bs-dismiss="modal"
+                data-bs-target="#carouselExampleIndicators"
+                data-bs-slide="prev"
               >
-                Inchide
+                <span
+                  class="carousel-control-prev-icon"
+                  aria-hidden="true"
+                ></span>
+                <span class="visually-hidden">Previous</span>
+              </button>
+              <button
+                class="carousel-control-next"
+                type="button"
+                data-bs-target="#carouselExampleIndicators"
+                data-bs-slide="next"
+              >
+                <span
+                  class="carousel-control-next-icon"
+                  aria-hidden="true"
+                ></span>
+                <span class="visually-hidden">Next</span>
               </button>
             </div>
           </div>
+        </section>
+      </main>
+    </div>
+    <div
+      class="modal fade"
+      id="contactModal"
+      tabindex="-1"
+      aria-labelledby="contactModalLabel"
+      aria-hidden="true"
+    >
+      <div class="modal-dialog modal-dialog-centered">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title" id="contactModalLabel">Contacteaza-ne</h5>
+            <button
+              type="button"
+              class="close"
+              data-bs-dismiss="modal"
+              aria-label="close"
+            ></button>
+          </div>
+          <div class="modal-body">
+            <p class="modal-contact-name heading-secondary">
+              Radu: <a href="tel:+40771567728">0771567728</a>
+            </p>
+            <p class="modal-contact-name heading-secondary">
+              Laura: <a href="tel:+40757339435">0757339435</a>
+            </p>
+          </div>
+          <div class="modal-footer">
+            <button
+              type="button"
+              class="btn--close-modal"
+              data-bs-dismiss="modal"
+            >
+              Inchide
+            </button>
+          </div>
         </div>
       </div>
+    </div>
   </body>
 </html>

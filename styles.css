@@ -30,6 +30,10 @@ body {
   overflow-x: hidden;
 }
 
+.hide {
+  display: none;
+}
+
 .intro {
   /* background-image: url(./images/header-cover.JPEG);
   background-position: center;
@@ -86,6 +90,26 @@ body {
 .main-nav-link:hover,
 .main-nav-link:active {
   color: #c67f43;
+}
+
+.switch-buttons {
+  display: flex;
+  gap: 3.2rem;
+  justify-content: center;
+}
+
+.btn-radu,
+.btn-laura {
+  font-size: 3.2rem;
+}
+
+.active {
+  color: #fdf2e9;
+}
+
+.btn-radu:hover,
+.btn-laura:hover {
+  cursor: pointer;
 }
 
 .main-nav-link.nav-cta:link,
@@ -298,10 +322,14 @@ body {
   width: 50%;
 }
 
+
+
 .step-img-box {
   display: flex;
   align-items: center;
   justify-content: center;
+  
+  
 }
 
 .nume-miri {
@@ -430,6 +458,10 @@ body {
   font-family: sans-serif;
 }
 
+.modal-contact-name a {
+  text-decoration: none;
+}
+
 /* General Carousel Styles */
 .carousel-inner {
   width: 100%;
@@ -459,10 +491,7 @@ body {
 }
 
 /* Carousel Controls */
-.carousel-control-prev-icon,
-.carousel-control-next-icon {
-  filter: invert(100%);
-}
+
 
 .carousel-control-prev,
 .carousel-control-next {
