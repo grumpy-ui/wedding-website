@@ -30,7 +30,7 @@
   }
 
   .carousel-item img {
-    height: 80vh; /* Adjust this value as needed for larger screens */
+    height: 80vh; 
   }
 
   .main-nav-list {
@@ -110,12 +110,7 @@
 }
 
 @media (max-width: 34rem) {
-  body {
-    background-image: url(./images/background_5.jpg);
-    background-attachment: fixed;
-
-  }
-
+ 
   .main {
     margin: 0 2.3rem;
     overflow-x: hidden;
@@ -173,7 +168,7 @@
   }
 
   .carousel-item img {
-    height: 70vh; /* Adjust this value as needed for larger screens */
+    height: 70vh; 
   }
 
 
