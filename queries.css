@@ -30,7 +30,7 @@
   }
 
   .carousel-item img {
-    height: 80vh; 
+    height: 80vh;
   }
 
   .main-nav-list {
@@ -110,7 +110,10 @@
 }
 
 @media (max-width: 34rem) {
- 
+  body {
+    background-attachment: scroll;
+  }
+
   .main {
     margin: 0 2.3rem;
     overflow-x: hidden;
@@ -168,9 +171,8 @@
   }
 
   .carousel-item img {
-    height: 70vh; 
+    height: 70vh;
   }
-
 
   .gallery {
     grid-template-columns: repeat(4, 1fr);
@@ -180,6 +182,4 @@
   .btn--gallery {
     grid-column: span 4;
   }
-  
 }
-

@@ -1,7 +1,3 @@
-document.addEventListener("DOMContentLoaded", function () {
-  var rellax = new Rellax(".rellax");
-});
-
 //Countdown
 
 var countDownDate = new Date("2024-11-09").getTime();
