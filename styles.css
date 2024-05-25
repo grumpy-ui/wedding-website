@@ -20,7 +20,7 @@ body {
   line-height: 1;
   font-weight: 400;
   color: #555;
-  background-image: url(./images/background_2.jpg);
+  background-image: url(./images/background_5.jpg);
   background-attachment: fixed;
   background-size: cover;
   background-repeat: no-repeat;
@@ -138,6 +138,10 @@ body {
   color: #333;
 }
 
+.modal-title {
+  font-size: 2.6rem;
+}
+
 /* .subheading {
 
   display: block;
@@ -194,6 +198,19 @@ body {
   background-color: #45260a;
   color: #fdf2e9;
   padding: 1.2rem;
+}
+
+.btn--close-modal {
+  display: inline-block;
+  font-size: 1.8rem;
+  padding: 1.2rem;
+  border-radius: 13px;
+  background-color: #c67f43;
+}
+
+.btn--contact {
+  background-color: #fdf2e9;
+  color: #45260a;
 }
 
 .btn--form:hover,
@@ -382,7 +399,9 @@ body {
 }
 
 .section-gallery {
-  background-image: linear-gradient(to left, #7b876d, #eb984e);
+  background-color: #fdf2e9;
+  margin-bottom: 2.4rem;
+  padding-bottom: 2.4rem;
 }
 
 .gallery {
@@ -390,7 +409,7 @@ body {
   grid-template-columns: repeat(4, 1fr);
   gap: 1.6rem;
   padding: 2.6rem;
-  background-image: linear-gradient(to left, #7b876d, #eb984e);
+  background-color: #fdf2e9;
 }
 
 .gallery-heading {
@@ -420,7 +439,7 @@ body {
 .carousel-item img {
   object-fit: cover;
   width: 90%;
-  height: 90vh; /* Adjust this value as needed for your design */
+  height: 90vh;
 }
 
 /* Carousel Indicators */

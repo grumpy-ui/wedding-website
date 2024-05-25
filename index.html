@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="ro">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -81,7 +81,14 @@
                 <a href="#" class="btn btn--full margin-right-sm"
                   >Confirma prezenta</a
                 >
-                <a href="#" class="btn btn--outline">Contacteaza-ne &darr;</a>
+                <button
+                  href="#"
+                  class="btn btn--outline btn--contact"
+                  data-bs-toggle="modal"
+                  data-bs-target="#contactModal"
+                >
+                  Contacteaza-ne &darr;
+                </button>
               </div>
             </div>
           </section>
@@ -192,11 +199,11 @@
                   aria-label="Slide 3"
                 ></button>
                 <button
-                type="button"
-                data-bs-target="#carouselExampleIndicators"
-                data-bs-slide-to="3"
-                aria-label="Slide 4"
-              ></button>
+                  type="button"
+                  data-bs-target="#carouselExampleIndicators"
+                  data-bs-slide-to="3"
+                  aria-label="Slide 4"
+                ></button>
               </div>
               <div class="carousel-inner">
                 <div class="carousel-item active">
@@ -256,6 +263,44 @@
           </div>
         </section>
       </main>
+    </div>
+    <div
+      class="modal fade"
+      id="contactModal"
+      tabindex="-1"
+      aria-labelledby="contactModalLabel"
+      aria-hidden="true"
+    >
+      <div class="modal-dialog modal-dialog-centered">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title" id="contactModalLabel">Contacteaza-ne</h5>
+            <button
+              type="button"
+              class="close"
+              data-bs-dismiss="modal"
+              aria-label="close"
+            ></button>
+          </div>
+          <div class="modal-body">
+            <p class="modal-contact-name heading-secondary">
+              Radu: <a href="tel:+40771567728">0771567728</a>
+            </p>
+            <p class="modal-contact-name heading-secondary">
+              Laura: <a href="tel:+40757339435">0757339435</a>
+            </p>
+          </div>
+          <div class="modal-footer">
+            <button
+              type="button"
+              class="btn--close-modal"
+              data-bs-dismiss="modal"
+            >
+              Inchide
+            </button>
+          </div>
+        </div>
+      </div>
     </div>
   </body>
 </html>
