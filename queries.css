@@ -110,6 +110,12 @@
 }
 
 @media (max-width: 34rem) {
+  body {
+    background-image: url(./images/background_5.jpg);
+    background-attachment: fixed;
+
+  }
+
   .main {
     margin: 0 2.3rem;
     overflow-x: hidden;
