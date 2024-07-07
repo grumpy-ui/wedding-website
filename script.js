@@ -93,3 +93,38 @@ allLinks.forEach(function (link) {
 
 // observer.observe(sectionHeroEl);
 
+function initMap() {
+  // The location you want to show
+  const location = { lat: 47.4377691, lng: 23.2969981 };
+
+  // Create the map
+  const map = new google.maps.Map(document.getElementById("map"), {
+    zoom: 14,
+    center: location,
+  });
+
+  const locatie = document.querySelector(".locatie");
+
+  // Create a marker
+  const marker = new google.maps.Marker({
+    position: location,
+    map: map,
+  });
+
+  // Add a click listener on the map
+  function isMobileDevice() {
+    return /Mobi|Android/i.test(navigator.userAgent);
+  }
+
+  function openGoogleMapsApp() {
+    const location = { lat: -25.363, lng: 131.044 }; // Example coordinates
+
+    // Construct the URL for Google Maps with the specified location
+    const url = `https://www.google.com/maps/search/?api=1&query=${location.lat},${location.lng}`;
+
+    // Open Google Maps in a new tab or window
+    window.open(url, "_blank");
+  }
+
+  locatie.addEventListener("click", openGoogleMapsApp);
+}

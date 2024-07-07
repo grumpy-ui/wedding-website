@@ -28,6 +28,10 @@
       nomodule=""
       src="https://unpkg.com/ionicons@5.4.0/dist/ionicons/ionicons.js"
     ></script>
+    <script
+      src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAxKVE2ZgfGUMC23N7aHtz123VrNu4fcOU&callback=initMap"
+      defer
+    ></script>
   </head>
   <body>
     <script
@@ -53,7 +57,7 @@
                 <li>
                   <a class="main-nav-link" href="#">Povestea noastra</a>
                 </li>
-                <li><a class="main-nav-link" href="#">Locatie</a></li>
+                <li><a class="main-nav-link" href="#map">Locatie</a></li>
                 <li>
                   <a class="main-nav-link nav-cta" href="#cta"
                     >Confirma prezenta</a
@@ -62,7 +66,11 @@
               </ul>
             </nav>
             <button class="btn-mobile-nav">
-              <ion-icon id="icon" class="icon-mobile-nav" name="menu-outline"></ion-icon>
+              <ion-icon
+                id="icon"
+                class="icon-mobile-nav"
+                name="menu-outline"
+              ></ion-icon>
               <ion-icon class="icon-mobile-nav" name="close-outline"></ion-icon>
             </button>
           </header>
@@ -186,6 +194,8 @@
             </div>
           </div>
         </section>
+        <section class="locatie container rounded-borders"><div id="map"></div></section>
+
         <section class="section-gallery rounded-borders" id="gallery">
           <div class="container">
             <span class="heading-secondary gallery-heading">Astia suntem</span>
