@@ -28,15 +28,15 @@ var x = setInterval(function () {
 btnRadu.addEventListener("click", () => {
   radu.classList.remove("hide");
   laura.classList.add("hide");
-  btnRadu.classList.add("active");
-  btnLaura.classList.remove("active");
+  btnRadu.classList.add("active-btn");
+  btnLaura.classList.remove("active-btn");
 });
 
 btnLaura.addEventListener("click", () => {
   laura.classList.remove("hide");
   radu.classList.add("hide");
-  btnLaura.classList.add("active");
-  btnRadu.classList.remove("active");
+  btnLaura.classList.add("active-btn");
+  btnRadu.classList.remove("active-btn");
 });
 
 //Mobile navigation
@@ -72,3 +72,25 @@ allLinks.forEach(function (link) {
       headerEl.classList.toggle("nav-open");
   });
 });
+
+//Sticky navigation
+
+// const sectionHeroEl = document.querySelector(".section-hero");
+
+// const observer = new IntersectionObserver(
+//   function (entries) {
+//     const ent = entries[0];
+//     if (!ent.isIntersecting) {
+//       document.body.classList.add("sticky");
+//     } else {
+//       document.body.classList.remove("sticky");
+//     }
+//   },
+//   {
+//     root: null,
+//     threshold: 0,
+//     rootMargin: "-80px",
+//   }
+// );
+
+// observer.observe(sectionHeroEl);

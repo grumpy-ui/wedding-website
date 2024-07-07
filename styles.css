@@ -40,8 +40,9 @@ body {
   /* background-image: url(./images/header-cover.JPEG);
   background-position: center;
   background-size: contain; */
-  background-color: #7b876d;
-  color: #fdf2e9;
+  background-color: #fdf2e9;
+  color: #333;
+  /* position: relative; */
 }
 
 .main {
@@ -84,7 +85,7 @@ body {
 .main-nav-link:visited {
   display: inline-block;
   text-decoration: none;
-  color: #fae3e3;
+  color: #333;
   font-weight: 500;
   font-size: 1.8rem;
   transition: all 0.3s;
@@ -97,14 +98,18 @@ body {
 
 .switch-buttons {
   display: flex;
-  gap: 3.2rem;
+  gap: 6.4rem;
   justify-content: center;
 }
 
 .btn-radu,
 .btn-laura {
   font-size: 3.2rem;
+  display: inline-flex;
+  align-items: center;
 }
+
+
 
 .active {
   color: #fdf2e9;
@@ -145,6 +150,23 @@ body {
   display: none;
 }
 
+.sticky .header{
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  width: 100%;
+  height: 10rem;
+  padding-top: 0;
+  padding-bottom: 0;
+  background-color: #fff;
+  z-index: 999;
+  box-shadow: 0 1.2rem 3.2rem rgba(0, 0, 0, 0.1);
+}
+
+.sticky .section-hero {
+  margin-top: 9.6rem;
+}
+
 .heading-primary,
 .heading-secondary {
   font-weight: 700;
@@ -152,7 +174,7 @@ body {
 }
 
 .heading-primary {
-  color: #fdf2e9;
+  color: #333;
   font-size: 5.2rem;
   line-height: 1.05;
   margin-bottom: 3.2rem;
@@ -299,7 +321,7 @@ body {
 
 .section-despre-noi {
   padding: 9.6rem 0;
-  background-color: #c67f43;
+  background-color: #fdf2e9;
   margin-bottom: 3.2rem;
   /* background-image: url(./images/background_4.jpg);S */
 }
@@ -314,7 +336,7 @@ body {
 }
 #countdown {
   font-size: 2rem;
-  color: #fdf2e9;
+  color: #333;
   border-radius: 10px;
   display: inline-block;
   margin: 2rem 0;
@@ -460,6 +482,16 @@ body {
   grid-column: 4;
   font-family: sans-serif;
 }
+.active-btn{
+  color: #c67f43;
+  padding-left: 25px;
+}
+
+.active-btn::before {
+  content: "👉"; 
+
+}
+
 
 .modal-contact-name a {
   text-decoration: none;
