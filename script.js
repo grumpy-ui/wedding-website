@@ -1,10 +1,12 @@
 //Countdown
 
 var countDownDate = new Date("2024-11-09").getTime();
-const laura = document.querySelector(".laura")
-const radu = document.querySelector(".radu")
-const btnRadu = document.querySelector(".btn-radu")
-const btnLaura = document.querySelector(".btn-laura")
+const laura = document.querySelector(".laura");
+const radu = document.querySelector(".radu");
+const btnRadu = document.querySelector(".btn-radu");
+const btnLaura = document.querySelector(".btn-laura");
+const btnNavEl = document.querySelector(".btn-mobile-nav");
+const headerEl = document.querySelector(".header");
 
 var x = setInterval(function () {
   var now = new Date().getTime();
@@ -23,16 +25,22 @@ var x = setInterval(function () {
   }
 }, 1000);
 
-btnRadu.addEventListener('click', () => {
-  radu.classList.remove('hide');
-  laura.classList.add('hide');
-  btnRadu.classList.add('active');
-  btnLaura.classList.remove('active')
-})
+btnRadu.addEventListener("click", () => {
+  radu.classList.remove("hide");
+  laura.classList.add("hide");
+  btnRadu.classList.add("active");
+  btnLaura.classList.remove("active");
+});
 
-btnLaura.addEventListener('click', () => {
-  laura.classList.remove('hide');
-  radu.classList.add('hide')
-  btnLaura.classList.add('active');
-  btnRadu.classList.remove('active')
+btnLaura.addEventListener("click", () => {
+  laura.classList.remove("hide");
+  radu.classList.add("hide");
+  btnLaura.classList.add("active");
+  btnRadu.classList.remove("active");
+});
+
+//Mobile navigation
+
+btnNavEl.addEventListener('click', function() {
+  headerEl.classList.toggle('nav-open')
 })
