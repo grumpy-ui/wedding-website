@@ -117,9 +117,9 @@ function initMap() {
   }
 
   function openGoogleMapsApp() {
-    const location = { lat: -25.363, lng: 131.044 }; // Example coordinates
+    const location = { lat: 47.4377691, lng: 23.2969981 }; 
 
-    // Construct the URL for Google Maps with the specified location
+
     const url = `https://www.google.com/maps/search/?api=1&query=${location.lat},${location.lng}`;
 
     // Open Google Maps in a new tab or window
