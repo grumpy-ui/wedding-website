@@ -1,5 +1,3 @@
-//Countdown
-
 var countDownDate = new Date("2024-11-09").getTime();
 const laura = document.querySelector(".laura");
 const radu = document.querySelector(".radu");
@@ -94,3 +92,4 @@ allLinks.forEach(function (link) {
 // );
 
 // observer.observe(sectionHeroEl);
+
