@@ -131,9 +131,9 @@
 }
 
 @media (max-width: 34rem) {
-  body {
+  /* body {
     background-attachment: scroll;
-  }
+  } */
 
   .main {
     margin: 0 2.3rem;
