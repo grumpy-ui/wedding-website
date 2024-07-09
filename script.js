@@ -94,7 +94,7 @@ allLinks.forEach(function (link) {
 // observer.observe(sectionHeroEl);
 
 function initMap() {
-  // The location you want to show
+
   const location = { lat: 47.4377691, lng: 23.2969981 };
 
   // Create the map

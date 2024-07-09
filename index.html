@@ -145,56 +145,64 @@
           </div>
         </section>
         <section class="section-cta" id="cta">
-          <div class="container">
-            <div class="cta rounded-borders">
-              <div class="cta-text-box">
-                <h2 class="heading-secondary">Confirma prezenta:</h2>
-                <p class="cta-text"></p>
-                <form class="cta-form">
-                  <label for="nume-prenume">Nume si Prenume</label>
-                  <input
-                    id="nume-prenume"
-                    type="text"
-                    placeholder="Nume si prenume"
-                  />
-                  <label for="telefon">Numar de telefon</label>
-                  <input
-                    id="telefon"
-                    type="number"
-                    placeholder="Numar de telefon"
-                  />
-                  <div class="adulti-copii">
-                    <div class="input-containter">
-                      <label for="adulti">Adulti</label>
-                      <input
-                        id="adulti"
-                        type="number"
-                        placeholder="Adulti"
-                        min="0"
-                      />
+            <div class="container">
+              <div class="cta rounded-borders">
+                <div class="cta-text-box">
+                  <h2 class="heading-secondary">Confirma prezenta:</h2>
+                  <p class="cta-text"></p>
+                  <form action="https://formspree.io/f/xvgpoeqj"
+                  method="POST" class="cta-form">
+                    <label for="nume-prenume">Nume si Prenume</label>
+                    <input
+                    name="name"
+                      id="nume-prenume"
+                      type="text"
+                      placeholder="Nume si prenume"
+                    />
+                    <label for="telefon">Numar de telefon</label>
+                    <input
+                      name="phone-number"
+                      id="telefon"
+                      type="number"
+                      placeholder="Numar de telefon"
+                    />
+                    <div class="adulti-copii">
+                      <div class="input-containter">
+                        <label for="adulti">Adulti</label>
+                        <input
+                          name="adults"
+                          id="adulti"
+                          type="number"
+                          placeholder="Adulti"
+                          min="0"
+                        />
+                      </div>
+                      <div class="input-containter">
+                        <label for="copii">Copii</label>
+                        <input
+                          name="children"
+                          id="copii"
+                          type="number"
+                          placeholder="(sub 13 ani)"
+                          min="0"
+                        />
+                      </div>
                     </div>
-                    <div class="input-containter">
-                      <label for="copii">Copii</label>
-                      <input
-                        id="copii"
-                        type="number"
-                        placeholder="(sub 13 ani)"
-                        min="0"
-                      />
-                    </div>
-                  </div>
-                  <button class="btn btn--form">Confirma</button>
-                </form>
+                    <button type ="submit" class="btn btn--form">Confirma</button>
+                 
+                </div>
+                <div
+                  class="cta-img-box"
+                  role="img"
+                  aria-label="photo of autumn flowers"
+                ></div>
               </div>
-              <div
-                class="cta-img-box"
-                role="img"
-                aria-label="photo of autumn flowers"
-              ></div>
             </div>
-          </div>
+          </form>
         </section>
-        <section class="locatie container rounded-borders"><div id="map"></div></section>
+        <section class="locatie container rounded-borders">
+          <div id="map"></div>
+        </section>
 
         <section class="section-gallery rounded-borders" id="gallery">
           <div class="container">
