@@ -219,6 +219,7 @@ body {
   line-height: 1.6;
   margin-bottom: 4.8rem;
 }
+.active-btn,
 .btn,
 .btn:link,
 .btn:visited {
@@ -254,8 +255,8 @@ body {
   background-color: #c67f43;
 }
 
-.btn--contact {
-  background-color: #fdf2e9;
+.btn--secondary {
+  background-color: #dbc9ba;
   color: #45260a;
 }
 
@@ -485,7 +486,8 @@ body {
   font-family: sans-serif;
 }
 .active-btn {
-  color: #c67f43;
+  color: #fdf2e9;
+  background-color: #c67f43
 }
 
 .modal-contact-name a {

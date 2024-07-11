@@ -26,15 +26,15 @@ var x = setInterval(function () {
 btnRadu.addEventListener("click", () => {
   radu.classList.remove("hide");
   laura.classList.add("hide");
-  btnRadu.classList.add("active-btn");
-  btnLaura.classList.remove("active-btn");
+  btnRadu.classList.remove("active-btn");
+  btnLaura.classList.add("active-btn");
 });
 
 btnLaura.addEventListener("click", () => {
   laura.classList.remove("hide");
   radu.classList.add("hide");
-  btnLaura.classList.add("active-btn");
-  btnRadu.classList.remove("active-btn");
+  btnLaura.classList.remove("active-btn");
+  btnRadu.classList.add("active-btn");
 });
 
 //Mobile navigation
