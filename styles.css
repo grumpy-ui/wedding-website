@@ -465,7 +465,7 @@ body {
 .section-gallery {
   background-color: #fdf2e9;
   margin-bottom: 2.4rem;
-  padding-bottom: 2.4rem;
+  padding-bottom: 6.4rem;
 }
 
 .gallery {
@@ -474,6 +474,12 @@ body {
   gap: 1.6rem;
   padding: 2.6rem;
   background-color: #fdf2e9;
+}
+
+.photo-description {
+  margin-top: 2.4rem;
+  font-size: 2.6rem;
+  text-align: center;
 }
 
 .gallery-heading {

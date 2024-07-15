@@ -94,7 +94,6 @@ allLinks.forEach(function (link) {
 // observer.observe(sectionHeroEl);
 
 function initMap() {
-
   const location = { lat: 47.4377691, lng: 23.2969981 };
 
   // Create the map
@@ -117,8 +116,7 @@ function initMap() {
   }
 
   function openGoogleMapsApp() {
-    const location = { lat: 47.4377691, lng: 23.2969981 }; 
-
+    const location = { lat: 47.4377691, lng: 23.2969981 };
 
     const url = `https://www.google.com/maps/search/?api=1&query=${location.lat},${location.lng}`;
 
@@ -128,3 +126,25 @@ function initMap() {
 
   locatie.addEventListener("click", openGoogleMapsApp);
 }
+
+document.addEventListener("DOMContentLoaded", function () {
+  const carousel = document.getElementById("carouselExampleIndicators");
+  const photoDescriptions = {
+    "./images/gallery/gallery-8.JPEG": "La inaltime pe Creasta Cocosului",
+    "./images/gallery/gallery-9.JPEG": "In natura",
+    "./images/gallery/gallery-11.JPEG": "Being silly",
+    "./images/gallery/gallery-13.JPEG": "La un ceai",
+  };
+
+  carousel.addEventListener("slid.bs.carousel", function () {
+    const activeItem = carousel.querySelector(".carousel-item.active");
+    const activeImage = activeItem.querySelector("img");
+    const imageSrc = activeImage.getAttribute("src");
+    const description = photoDescriptions[imageSrc];
+
+    const photoDescriptionElement = document.querySelector(
+      ".section-gallery .photo-description"
+    );
+    photoDescriptionElement.textContent = description;
+  });
+});
