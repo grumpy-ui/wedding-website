@@ -325,7 +325,7 @@ body {
 .grid--4-cols {
   grid-template-columns: repeat(4, 1fr);
 }
-
+.section-povestea-noastra,
 .section-despre-noi {
   padding: 9.6rem 0;
   background-color: #fdf2e9;
@@ -367,10 +367,16 @@ body {
 }
 
 .descriere-miri {
+  margin-bottom: 2.8rem;
+}
+
+.povestea-noastra-text,
+.descriere-miri {
   font-size: 2.3rem;
   margin-top: 1.4rem;
 }
 
+.povestea-noastra-title,
 .cine-sunt-mirii {
   text-align: center;
   display: block;

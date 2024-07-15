@@ -55,7 +55,9 @@
                 </li>
                 <li><a class="main-nav-link" href="#gallery">Galerie</a></li>
                 <li>
-                  <a class="main-nav-link" href="#">Povestea noastra</a>
+                  <a class="main-nav-link" href="#povestea-noastra"
+                    >Povestea noastra</a
+                  >
                 </li>
                 <li><a class="main-nav-link" href="#map">Locatie</a></li>
                 <li>
@@ -105,7 +107,7 @@
         </div>
         <section class="section-despre-noi rounded-borders" id="despre-noi">
           <div class="container despre-noi-header">
-            <span class="heading-secondary cine-sunt-mirii"
+            <span class="heading-primary cine-sunt-mirii"
               >Cine sunt mirii?</span
             >
             <div class="switch-buttons">
@@ -118,14 +120,39 @@
               <div class="step-text-box">
                 <p class="nume-miri">Laura</p>
                 <p class="descriere-miri">
-                  Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed
-                  do eiusmod tempor incididunt ut labore et dolore magna aliqua.
-                  Ut enim ad minim veniam, quis nostrud exercitation ullamco
-                  laboris nisi ut aliquip ex ea commodo consequat.
+                  Legenda spune ca daca o pui pe Laura intr-o camera cu 100 de
+                  straini, isi va face 101 prieteni.
+                </p>
+                <p class="descriere-miri">
+                  De la profesor de engleza la cioban de capre, Laura stie face
+                  de toate. A trait 15 ani in Spania, 4 ani in Anglia si isi va
+                  trai restul anilor cu Radu unde au ei chef.
+                </p>
+                <p class="descriere-miri">
+                  Pe langa abilitatile ei de a gasi idei inedite oricarei
+                  probleme, ea are un simt al mirosului aproape super uman.
+                </p>
+                <p class="descriere-miri">
+                  Fiind un adevarat "titirez", Laura a fost dintotdeanua
+                  sufletul petrecerii. Un magnet de oameni care militeaza pentru
+                  cauze sociale si care nu este influentata de prejudecati,
+                  fiind in stare sa vada prima data bunatatea din om.
+                </p>
+                <p class="descriere-miri">
+                  Dar Laura nu iubeste doar oamenii, ci si animalele si tot ce
+                  are suflare de viata. Adora natura si este absolut fascinata
+                  de rasarituri si apusuri.
+                </p>
+                <p class="descriere-miri">
+                  Toate aceste lucruri fac din Laura o adevarata forta a
+                  naturii. Un aliat incoruptibil al dreptatii care nu este
+                  interesata de lucruri materiale, ci este ancorata in
+                  adevaratele valori ce ne incojoara, dar pe care oamenii de
+                  rand sunt rareori in stare sa le observe.
                 </p>
               </div>
               <div class="step-image-box laura-img">
-                <img src="./images/despre_noi_laura.PNG" class="step-img" />
+                <img src="./images/despre_noi_laura_2_2.PNG" class="step-img" />
               </div>
             </div>
             <div class="radu hide">
@@ -138,75 +165,90 @@
                   laboris nisi ut aliquip ex ea commodo consequat.
                 </p>
                 <div class="step-image-box radu-img">
-                  <img src="./images/despre_noi_radu.PNG" class="step-img" />
+                  <img src="./images/despre_noi_radu_2.png" class="step-img" />
                 </div>
               </div>
             </div>
           </div>
         </section>
-        <section class="section-cta" id="cta">
-            <div class="container">
-              <div class="cta rounded-borders">
-                <div class="cta-text-box">
-                  <h2 class="heading-secondary">Confirma prezenta:</h2>
-                  <p class="cta-text"></p>
-                  <form action="https://formspree.io/f/xvgpoeqj"
-                  method="POST" class="cta-form">
-                    <label for="nume-prenume">Nume si Prenume</label>
-                    <input
-                    name="name"
-                      id="nume-prenume"
-                      type="text"
-                      placeholder="Nume si prenume"
-                    />
-                    <label for="telefon">Numar de telefon</label>
-                    <input
-                      name="phone-number"
-                      id="telefon"
-                      type="number"
-                      placeholder="Numar de telefon"
-                    />
-                    <div class="adulti-copii">
-                      <div class="input-containter">
-                        <label for="adulti">Adulti</label>
-                        <input
-                          name="adults"
-                          id="adulti"
-                          type="number"
-                          placeholder="Adulti"
-                          min="0"
-                        />
-                      </div>
-                      <div class="input-containter">
-                        <label for="copii">Copii</label>
-                        <input
-                          name="children"
-                          id="copii"
-                          type="number"
-                          placeholder="(sub 13 ani)"
-                          min="0"
-                        />
-                      </div>
-                    </div>
-                    <button type ="submit" class="btn btn--form">Confirma</button>
-                 
-                </div>
-                <div
-                  class="cta-img-box"
-                  role="img"
-                  aria-label="photo of autumn flowers"
-                ></div>
-              </div>
-            </div>
-          </form>
+        <section
+          class="section-povestea-noastra rounded-borders hide"
+          id="povestea-noastra"
+        >
+          <div class="container">
+            <h1 class="heading-primary povestea-noastra-title">
+              Povestea noastra
+            </h1>
+            <p class="povestea-noastra-text">
+              Povestea noastra incepe in 2009,
+            </p>
+          </div>
         </section>
+        <section class="section-cta" id="cta">
+          <div class="container">
+            <div class="cta rounded-borders">
+              <div class="cta-text-box">
+                <h2 class="heading-secondary">Confirma prezenta:</h2>
+                <p class="cta-text"></p>
+                <form
+                  action="https://formspree.io/f/xvgpoeqj"
+                  method="POST"
+                  class="cta-form"
+                >
+                  <label for="nume-prenume">Nume si Prenume</label>
+                  <input
+                    name="name"
+                    id="nume-prenume"
+                    type="text"
+                    placeholder="Nume si prenume"
+                  />
+                  <label for="telefon">Numar de telefon</label>
+                  <input
+                    name="phone-number"
+                    id="telefon"
+                    type="number"
+                    placeholder="Numar de telefon"
+                  />
+                  <div class="adulti-copii">
+                    <div class="input-containter">
+                      <label for="adulti">Adulti</label>
+                      <input
+                        name="adults"
+                        id="adulti"
+                        type="number"
+                        placeholder="Adulti"
+                        min="0"
+                      />
+                    </div>
+                    <div class="input-containter">
+                      <label for="copii">Copii</label>
+                      <input
+                        name="children"
+                        id="copii"
+                        type="number"
+                        placeholder="(sub 13 ani)"
+                        min="0"
+                      />
+                    </div>
+                  </div>
+                  <button type="submit" class="btn btn--form">Confirma</button>
+                </form>
+              </div>
+              <div
+                class="cta-img-box"
+                role="img"
+                aria-label="photo of autumn flowers"
+              ></div>
+            </div>
+          </div>
+        </section>
+
         <section class="locatie container rounded-borders">
           <div id="map"></div>
         </section>
-
         <section class="section-gallery rounded-borders" id="gallery">
           <div class="container">
-            <span class="heading-secondary gallery-heading">Astia suntem</span>
+            <span class="heading-secondary gallery-heading">Galerie</span>
             <div id="carouselExampleIndicators" class="carousel slide">
               <div class="carousel-indicators">
                 <button
