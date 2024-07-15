@@ -31,8 +31,6 @@ body {
   overflow-x: hidden;
 }
 
-
-
 .hide {
   display: none;
 }
@@ -466,6 +464,7 @@ body {
   background-color: #fdf2e9;
   margin-bottom: 2.4rem;
   padding-bottom: 6.4rem;
+  padding-top: 2.4rem;
 }
 
 .gallery {
@@ -501,7 +500,7 @@ body {
 }
 .active-btn {
   color: #fdf2e9;
-  background-color: #c67f43
+  background-color: #c67f43;
 }
 
 .modal-contact-name a {
