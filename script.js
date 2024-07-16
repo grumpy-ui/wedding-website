@@ -148,3 +148,47 @@ document.addEventListener("DOMContentLoaded", function () {
     photoDescriptionElement.textContent = description;
   });
 });
+
+document.addEventListener("DOMContentLoaded", () => {
+  const adultsInput = document.getElementById("adulti");
+  const childrenInput = document.getElementById("copii");
+  const attendeesContainer = document.getElementById("attendees-container");
+
+  function createAttendeeInput(index, type) {
+    const inputContainer = document.createElement("div");
+    inputContainer.classList.add("input-container");
+
+    const label = document.createElement("label");
+    label.classList.add("label-text");
+    label.setAttribute("for", `attendee-${type}-${index}`);
+    label.textContent = `Nume ${type} ${index + 1}`;
+
+    const input = document.createElement("input");
+    input.name = `${type}-name-${index}`;
+    input.id = `attendee-${type}-${index}`;
+    input.type = "text";
+    input.placeholder = `Nume si prenume ${type}`;
+
+    inputContainer.appendChild(label);
+    inputContainer.appendChild(input);
+    return inputContainer;
+  }
+
+  function updateAttendees() {
+    attendeesContainer.innerHTML = "";
+
+    const numAdults = parseInt(adultsInput.value) || 0;
+    const numChildren = parseInt(childrenInput.value) || 0;
+
+    for (let i = 0; i < numAdults; i++) {
+      attendeesContainer.appendChild(createAttendeeInput(i, "adult"));
+    }
+
+    for (let i = 0; i < numChildren; i++) {
+      attendeesContainer.appendChild(createAttendeeInput(i, "copil"));
+    }
+  }
+
+  adultsInput.addEventListener("input", updateAttendees);
+  childrenInput.addEventListener("input", updateAttendees);
+});
