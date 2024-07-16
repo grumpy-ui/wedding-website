@@ -160,12 +160,12 @@ document.addEventListener("DOMContentLoaded", () => {
 
     const label = document.createElement("label");
     label.classList.add("label-text");
-    label.setAttribute("for", `attendee-${type}-${index}`);
+    label.setAttribute("for", `attendee-${type}-${index + 1}`);
     label.textContent = `Nume ${type} ${index + 1}`;
 
     const input = document.createElement("input");
-    input.name = `${type}-name-${index}`;
-    input.id = `attendee-${type}-${index}`;
+    input.name = `${type}-name-${index + 1}`;
+    input.id = `attendee-${type}-${index + 1}`;
     input.type = "text";
     input.placeholder = `Nume si prenume ${type}`;
 
