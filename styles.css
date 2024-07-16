@@ -283,7 +283,6 @@ body {
   box-shadow: inset 0 0 0 3px #fff;
 }
 
-
 .margin-right-sm {
   margin-right: 1.6rem !important;
 }
@@ -298,7 +297,7 @@ body {
   height: 500px;
   width: 100%;
   border: 5px solid #ddd;
-  border-radius: 8px; 
+  border-radius: 8px;
 }
 .grid {
   display: grid;
@@ -350,6 +349,11 @@ body {
 
 .step-img {
   width: 40%;
+}
+
+.program,
+.locatie-text {
+  text-align: center;
 }
 
 .step-img-box {
@@ -464,7 +468,6 @@ body {
   padding-bottom: 6.4rem;
   padding-top: 2.4rem;
 }
-
 
 .gallery {
   display: grid;
