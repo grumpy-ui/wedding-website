@@ -5,6 +5,7 @@ const btnRadu = document.querySelector(".btn-radu");
 const btnLaura = document.querySelector(".btn-laura");
 const btnNavEl = document.querySelector(".btn-mobile-nav");
 const headerEl = document.querySelector(".header");
+const mapEl = document.getElementById('map');
 
 var x = setInterval(function () {
   var now = new Date().getTime();
@@ -124,7 +125,7 @@ function initMap() {
     window.open(url, "_blank");
   }
 
-  locatie.addEventListener("click", openGoogleMapsApp);
+  mapEl.addEventListener("click", openGoogleMapsApp);
 }
 
 document.addEventListener("DOMContentLoaded", function () {
