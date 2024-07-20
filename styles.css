@@ -20,8 +20,8 @@ body {
   font-family: "Dancing Script", sans-serif;
   line-height: 1;
   font-weight: 400;
-  color: #555;
-  background-image: url(./images/background_5.jpg);
+  color: #333;
+  background-image: url(./images/background_6.jpeg);
   background-attachment: fixed;
   background-size: cover;
   background-repeat: no-repeat;
@@ -39,8 +39,8 @@ body {
   /* background-image: url(./images/header-cover.JPEG);
   background-position: center;
   background-size: contain; */
-  background-color: #fdf2e9;
-  color: #333;
+  background-color: #ccbb66c2;
+  color: #fff;
   /* position: relative; */
 }
 
@@ -224,7 +224,7 @@ body {
 .btn:link,
 .btn:visited {
   display: inline-block;
-  color: #fff;
+  color: #333;
   font-size: 2rem;
   font-weight: 600;
   padding: 1.6rem 3.2rem;
@@ -237,7 +237,7 @@ body {
 
 .btn--full:link,
 .btn--full:visited {
-  background-color: #c67f43;
+  background-color: #fff;
 }
 
 .btn--form,
@@ -256,7 +256,7 @@ body {
 }
 
 .btn--secondary {
-  background-color: #dbc9ba;
+  background-color: #969457;
   color: #45260a;
 }
 
@@ -288,7 +288,7 @@ body {
 }
 
 .locatie {
-  background-color: #fdf2e9;
+  background-color: #ccbb66c2;
   padding: 2.4rem;
   margin-bottom: 3.2rem;
 }
@@ -325,7 +325,8 @@ body {
 .section-povestea-noastra,
 .section-despre-noi {
   padding: 9.6rem 0;
-  background-color: #fdf2e9;
+  background-color: #c67e43ce;
+  /* background-color: #a06552bb; */
   margin-bottom: 3.2rem;
   /* background-image: url(./images/background_4.jpg);S */
 }
@@ -365,11 +366,12 @@ body {
 .nume-miri {
   font-size: 7.8rem;
   font-weight: 600;
-  color: #333;
+  color: #fff;
 }
-
+.cine-sunt-mirii,
 .descriere-miri {
   margin-bottom: 2.8rem;
+  color: #fff;
 }
 
 .povestea-noastra-text,
@@ -397,7 +399,7 @@ body {
   /* background-color: #fdf2e9; */
   display: grid;
   grid-template-columns: 2fr 1fr;
-  background-image: linear-gradient(to left, #7b876d, #eb984e);
+  background-image: linear-gradient(to left, #ccbb66c2, #c67e43ce);
   /* height: 50rem; */
 }
 
@@ -463,21 +465,16 @@ body {
 }
 
 .section-gallery {
-  background-color: #fdf2e9;
+  background-color: #c67e43ce;
   margin-bottom: 2.4rem;
   padding-bottom: 6.4rem;
   padding-top: 2.4rem;
 }
 
-.gallery {
-  display: grid;
-  grid-template-columns: repeat(4, 1fr);
-  gap: 1.6rem;
-  padding: 2.6rem;
-  background-color: #fdf2e9;
-}
+
 
 .photo-description {
+  color: #fff;
   margin-top: 2.4rem;
   font-size: 2.6rem;
   text-align: center;
