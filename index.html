@@ -41,7 +41,7 @@
     ></script>
     <div class="main">
       <main>
-        <div class="intro rounded-borders">
+        <div class="intro rounded-borders background-1">
           <header class="header">
             <img
               class="logo"
@@ -93,19 +93,22 @@
                 <a href="#cta" class="btn btn--full margin-right-sm"
                   >Confirma prezenta &darr;</a
                 >
-                <button
+                <a
                   href="#"
-                  class="btn btn--outline btn--secondary"
+                  class="btn btn--full margin-right-sm"
                   data-bs-toggle="modal"
                   data-bs-target="#contactModal"
                 >
                   Contacteaza-ne
-                </button>
+                </a>
               </div>
             </div>
           </section>
         </div>
-        <section class="section-despre-noi rounded-borders" id="despre-noi">
+        <section
+          class="section-despre-noi rounded-borders background-2"
+          id="despre-noi"
+        >
           <div class="container despre-noi-header">
             <span class="heading-primary cine-sunt-mirii"
               >Cine sunt mirii?</span
@@ -158,11 +161,46 @@
             <div class="radu hide">
               <div class="step-text-box">
                 <p class="nume-miri">Radu</p>
+                <p class="descriere-miri"><strong>Nume poezie</strong></p>
                 <p class="descriere-miri">
-                  Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed
-                  do eiusmod tempor incididunt ut labore et dolore magna aliqua.
-                  Ut enim ad minim veniam, quis nostrud exercitation ullamco
-                  laboris nisi ut aliquip ex ea commodo consequat.
+                  Ochi căprui verzișori, barbă neagră creață, inimă de om cu o
+                  viață.<br />
+                  Radu se numește și are și el a lui poveste.<br />
+                  O poveste ce demult a început, 94 anul in care s-a născut.
+                </p>
+
+                <p class="descriere-miri">
+                  Unul din cei patru, băiatul cel mare priceput<br />
+                  Un adolescent tăcut dar cu sufletul de lup.<br />
+                  Inteligent și perspicace și-a luat viața în mâini deodată
+                </p>
+                <p class="descriere-miri">
+                  Norii negri au apărut dar el nu s-a dat bătut<br />
+                  Cel de sus in continuare îl avea tot în vizor<br />
+                  Și-o domnița de peste hotare îl privea cu admirare in fata
+                  unui calculator.
+                </p>
+
+                <p class="descriere-miri">
+                  Ani au trec încet dar agenda lui tot plină <br />
+                  Între cărți de mare preț, teorii mondiale<br />
+                  Începu o licărire într-o notă mica fină.<br />
+                  Din biroul zgomotos si-ncărcat de documente<br />
+                  Tot mai mult natura îl chema<br />
+                  Să îi cunoască a ei tandrețe.
+                </p>
+
+                <p class="descriere-miri">
+                  Din firavul băiețel, a ajuns viteaz și mare<br />
+                  Este acum pe drumul cel duce la o sărbătoare<br />
+                  Se făcu tot așteptat dar de mire curând va fi îmbrăcat.
+                </p>
+
+                <p class="descriere-miri">
+                  El e unul cum nu mai sunt<br />
+                  El e sufletul ei pereche <br />
+                  O iubește, se iubesc și în curând vor da la toți de veste.<br />
+                  Nunta mar' se prevestește.
                 </p>
                 <div class="step-image-box radu-img">
                   <img src="./images/despre_noi_radu_2.png" class="step-img" />
@@ -186,7 +224,7 @@
         </section>
         <section class="section-cta" id="cta">
           <div class="container">
-            <div class="cta rounded-borders">
+            <div class="cta background-1 rounded-borders">
               <div class="cta-text-box">
                 <h2 class="heading-secondary">Confirma prezenta:</h2>
                 <p class="cta-text"></p>
@@ -203,6 +241,7 @@
                     id="telefon"
                     type="number"
                     placeholder="Numar de telefon"
+                    required
                   />
                   <div class="adulti-copii">
                     <div class="input-container">
@@ -213,6 +252,7 @@
                         type="number"
                         placeholder="Adulti"
                         min="0"
+                        required
                       />
                     </div>
                     <div class="input-container">
@@ -241,20 +281,23 @@
           </div>
         </section>
 
-        <section class="locatie rounded-borders">
+        <section class="locatie rounded-borders background-2">
           <div class="program">
-            <h1 class="heading-primary">Program:</h1>
+            <h1 class="heading-primary heading-color-1">Program:</h1>
             <p class="descriere-miri">12:00 - 13:00 Cununia religioasa</p>
             <p class="descriere-miri">13:30 - 20:00 Party</p>
           </div>
           <div class="locatie-text">
-            <h1 class="heading-primary">Locatie:</h1>
+            <h1 class="heading-primary heading-color-1">Locatie:</h1>
             <p class="descriere-miri">Pensiunea Festival Ticau</p>
             <p class="descriere-miri">Ticau 90B - 437355, Maramures</p>
           </div>
           <div class="container" id="map"></div>
         </section>
-        <section class="section-gallery rounded-borders" id="gallery">
+        <section
+          class="section-gallery rounded-borders background-1"
+          id="gallery"
+        >
           <div class="container margin-top">
             <div id="carouselExampleIndicators" class="carousel slide">
               <div class="carousel-indicators">
