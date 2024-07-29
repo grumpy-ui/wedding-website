@@ -255,6 +255,10 @@ body {
   cursor: pointer;
 }
 
+.btn--full {
+  margin-bottom: 3.2rem;
+}
+
 .btn--full:link,
 .btn--full:visited {
   background-color: #272727;
