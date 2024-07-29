@@ -35,7 +35,7 @@ body {
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center;
-  /* z-index: -1; */
+  z-index: -1;
 }
 
 .hide {
@@ -55,10 +55,8 @@ body {
 }
 
 .heading-color-2 {
-  color:#272727
+  color: #272727;
 }
-
-
 
 .main {
   /* display: flex;
@@ -426,7 +424,7 @@ body {
   font-size: 1.6rem;
 }
 
-.cta{
+.cta {
   margin-bottom: 3.2rem;
 }
 
