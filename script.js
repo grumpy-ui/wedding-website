@@ -128,27 +128,32 @@ function initMap() {
   mapEl.addEventListener("click", openGoogleMapsApp);
 }
 
-document.addEventListener("DOMContentLoaded", function () {
-  const carousel = document.getElementById("carouselExampleIndicators");
-  const photoDescriptions = {
-    "./images/gallery/gallery-8.JPEG": "La inaltime pe Creasta Cocosului",
-    "./images/gallery/gallery-9.JPEG": "In natura",
-    "./images/gallery/gallery-11.JPEG": "Being silly",
-    "./images/gallery/gallery-13.JPEG": "La un ceai",
-  };
 
-  carousel.addEventListener("slid.bs.carousel", function () {
-    const activeItem = carousel.querySelector(".carousel-item.active");
-    const activeImage = activeItem.querySelector("img");
-    const imageSrc = activeImage.getAttribute("src");
-    const description = photoDescriptions[imageSrc];
+document.addEventListener('click', ()=> {
+  
+})
 
-    const photoDescriptionElement = document.querySelector(
-      ".section-gallery .photo-description"
-    );
-    photoDescriptionElement.textContent = description;
-  });
-});
+// document.addEventListener("DOMContentLoaded", function () {
+//   const carousel = document.getElementById("carouselExampleIndicators");
+//   const photoDescriptions = {
+//     "./images/gallery/gallery-8.JPEG": "La inaltime pe Creasta Cocosului",
+//     "./images/gallery/gallery-9.JPEG": "In natura",
+//     "./images/gallery/gallery-11.JPEG": "Being silly",
+//     "./images/gallery/gallery-13.JPEG": "La un ceai",
+//   };
+
+//   carousel.addEventListener("slid.bs.carousel", function () {
+//     const activeItem = carousel.querySelector(".carousel-item.active");
+//     const activeImage = activeItem.querySelector("img");
+//     const imageSrc = activeImage.getAttribute("src");
+//     const description = photoDescriptions[imageSrc];
+
+//     const photoDescriptionElement = document.querySelector(
+//       ".section-gallery .photo-description"
+//     );
+//     photoDescriptionElement.textContent = description;
+//   });
+// });
 
 document.addEventListener("DOMContentLoaded", () => {
   const adultsInput = document.getElementById("adulti");

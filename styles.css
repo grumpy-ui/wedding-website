@@ -478,6 +478,11 @@ body {
   text-align: center;
 }
 
+
+.btn--see-more {
+  margin-top: 2.4rem;
+}
+
 .gallery-heading {
   grid-column: span 4;
 }
