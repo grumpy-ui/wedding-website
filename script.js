@@ -131,10 +131,18 @@ function initMap() {
 document.addEventListener("DOMContentLoaded", function () {
   const carousel = document.getElementById("carouselExampleIndicators");
   const photoDescriptions = {
-    "./images/gallery/gallery-8.JPEG": "La inaltime pe Creasta Cocosului",
-    "./images/gallery/gallery-9.JPEG": "In natura",
-    "./images/gallery/gallery-11.JPEG": "Being silly",
-    "./images/gallery/gallery-13.JPEG": "La un ceai",
+    "./images/gallery/gallery-8.JPEG": "Mereu la inaltime",
+    "./images/gallery/gallery-3.JPEG": "POV: Ai gasit capatul curcubeului",
+    "./images/gallery/gallery-11.JPEG": "Revelion vibes",
+    "./images/gallery/gallery-19.JPG": "Indragostiti lulea",
+    "./images/gallery/gallery-20.JPG": "Stam frumos la poza",
+    "./images/gallery/gallery-21.JPG": "Enervam fotografu",
+    "./images/gallery/gallery-22.JPG": "Figuri",
+    "./images/gallery/gallery-7.JPEG": "V-am pupat",
+    "./images/gallery/gallery-23.jpg": "Plimbare prin Barcelona",
+    "./images/gallery/gallery-24.jpg": "Vizitam lumea",
+    "./images/gallery/gallery-25.jpg": "Ascultam muzica buna",
+    "./images/gallery/gallery-26.jpg": "Casa din Certeze",
   };
 
   carousel.addEventListener("slid.bs.carousel", function () {
