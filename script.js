@@ -32,7 +32,7 @@ const translations = {
 
 function changeLanguage() {
   const selectedLanguage = document.getElementById('language-selector').value;
-  localStorage.setItem('preferredLanguage', selectedLanguage);
+  // localStorage.setItem('preferredLanguage', selectedLanguage);
   applyTranslations(selectedLanguage);
 }
 
@@ -50,11 +50,11 @@ function applyTranslations(lang) {
 }
 
 // Load the saved language or default to Romanian on page load
-window.onload = function() {
-  const savedLanguage = localStorage.getItem('preferredLanguage') || 'ro';
-  document.getElementById('language-selector').value = savedLanguage;
-  applyTranslations(savedLanguage);
-};
+// window.onload = function() {
+//   const savedLanguage = localStorage.getItem('preferredLanguage') || 'ro';
+//   document.getElementById('language-selector').value = savedLanguage;
+//   applyTranslations(savedLanguage);
+// };
 
 
 var x = setInterval(function () {
@@ -122,27 +122,6 @@ allLinks.forEach(function (link) {
   });
 });
 
-//Sticky navigation
-
-// const sectionHeroEl = document.querySelector(".section-hero");
-
-// const observer = new IntersectionObserver(
-//   function (entries) {
-//     const ent = entries[0];
-//     if (!ent.isIntersecting) {
-//       document.body.classList.add("sticky");
-//     } else {
-//       document.body.classList.remove("sticky");
-//     }
-//   },
-//   {
-//     root: null,
-//     threshold: 0,
-//     rootMargin: "-80px",
-//   }
-// );
-
-// observer.observe(sectionHeroEl);
 
 function initMap() {
   const location = { lat: 47.4377691, lng: 23.2969981 };
@@ -178,35 +157,6 @@ function initMap() {
   mapEl.addEventListener("click", openGoogleMapsApp);
 }
 
-document.addEventListener("DOMContentLoaded", function () {
-  const carousel = document.getElementById("carouselExampleIndicators");
-  const photoDescriptions = {
-    "./images/gallery/gallery-8.JPEG": "Mereu la inaltime",
-    "./images/gallery/gallery-3.JPEG": "POV: Ai gasit capatul curcubeului",
-    "./images/gallery/gallery-11.JPEG": "Revelion vibes",
-    "./images/gallery/gallery-19.JPG": "Indragostiti lulea",
-    "./images/gallery/gallery-20.JPG": "Stam frumos la poza",
-    "./images/gallery/gallery-21.JPG": "Enervam fotografu",
-    "./images/gallery/gallery-22.JPG": "Figuri",
-    "./images/gallery/gallery-7.JPEG": "V-am pupat",
-    "./images/gallery/gallery-23.jpg": "Plimbare prin Barcelona",
-    "./images/gallery/gallery-24.jpg": "Vizitam lumea",
-    "./images/gallery/gallery-25.jpg": "Ascultam muzica buna",
-    "./images/gallery/gallery-26.jpg": "Casa din Certeze",
-  };
-
-  carousel.addEventListener("slid.bs.carousel", function () {
-    const activeItem = carousel.querySelector(".carousel-item.active");
-    const activeImage = activeItem.querySelector("img");
-    const imageSrc = activeImage.getAttribute("src");
-    const description = photoDescriptions[imageSrc];
-
-    const photoDescriptionElement = document.querySelector(
-      ".section-gallery .photo-description"
-    );
-    photoDescriptionElement.textContent = description;
-  });
-});
 
 document.addEventListener("DOMContentLoaded", () => {
   const adultsInput = document.getElementById("adulti");
