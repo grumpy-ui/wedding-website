@@ -1,442 +1,76 @@
 <!DOCTYPE html>
-<html lang="ro">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Laura si Radu</title>
-    <link
-      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
-      rel="stylesheet"
-      integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH"
-      crossorigin="anonymous"
-    />
-    <link rel="stylesheet" href="styles.css" />
-    <link rel="stylesheet" href="queries.css" />
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Briem+Hand:wght@100..900&family=Dancing+Script:wght@400..700&display=swap"
-      rel="stylesheet"
-    />
-    <script src="script.js" defer></script>
-    <script src="https://cdn.jsdelivr.net/npm/rellax@1.12.1/rellax.min.js"></script>
-    <script
-      type="module"
-      src="https://unpkg.com/ionicons@5.4.0/dist/ionicons/ionicons.esm.js"
-    ></script>
-    <script
-      nomodule=""
-      src="https://unpkg.com/ionicons@5.4.0/dist/ionicons/ionicons.js"
-    ></script>
-    <script
-      src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAxKVE2ZgfGUMC23N7aHtz123VrNu4fcOU&callback=initMap"
-      defer
-    ></script>
-  </head>
-  <body>
-    <script
-      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
-      integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
-      crossorigin="anonymous"
-    ></script>
-    <div class="background"></div>
-    <div class="main">
-      <main>
-        <div class="intro rounded-borders background-1">
-          <header class="header">
-            <img
-              class="logo"
-              alt="lauradu logo"
-              src="./images/logo_transparent.PNG"
-            />
-            <nav class="main-nav">
-              <ul class="main-nav-list">
-                <li>
-                  <a class="main-nav-link" href="#despre-noi">Despre noi</a>
-                </li>
-                <li><a class="main-nav-link" href="#gallery">Galerie</a></li>
-                <li><a class="main-nav-link" href="#map">Locatie</a></li>
-                <li>
-                  <a class="main-nav-link nav-cta" href="#cta"
-                    >Confirma prezenta</a
-                  >
-                </li>
-              </ul>
-            </nav>
-            <button class="btn-mobile-nav">
-              <ion-icon
-                id="icon"
-                class="icon-mobile-nav"
-                name="menu-outline"
-              ></ion-icon>
-              <ion-icon class="icon-mobile-nav" name="close-outline"></ion-icon>
-            </button>
-          </header>
-          <section class="section-hero">
-            <div class="hero">
-              <div class="hero-text-box">
-                <h1 class="heading-primary">Esti invitat la nunta noastra!</h1>
-                <div class="countdown-container">
-                  <p class="date">9 Noiembrie 2024</p>
-                  <div id="countdown"></div>
-                </div>
-                <!-- <p class="hero-description">
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do
-              eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut
-              enim ad minim veniam, quis nostrud exercitation ullamco laboris
-              nisi ut aliquip ex ea commodo consequat.
-            </p> -->
-                <a href="#cta" class="btn btn--full"
-                  >Confirma prezenta &darr;</a
-                >
-                <a
-                  href="#"
-                  class="btn btn--full"
-                  data-bs-toggle="modal"
-                  data-bs-target="#contactModal"
-                >
-                  Contacteaza-ne
-                </a>
-              </div>
-            </div>
-          </section>
-        </div>
-        <section
-          class="section-despre-noi rounded-borders background-2"
-          id="despre-noi"
-        >
-          <div class="container despre-noi-header">
-            <span class="heading-primary cine-sunt-mirii"
-              >Cine sunt mirii?</span
-            >
-            <div class="switch-buttons">
-              <p class="btn-radu active-btn">Radu</p>
-              <p class="btn-laura">Laura</p>
-            </div>
-          </div>
-          <div class="container grid grid--1-col">
-            <div class="laura">
-              <div class="step-text-box">
-                <p class="nume-miri">Laura</p>
-                <p class="descriere-miri">
-                  Legenda spune ca daca o pui pe Laura intr-o camera cu 100 de
-                  straini, isi va face 101 prieteni.
-                </p>
-                <p class="descriere-miri">
-                  De la profesor de engleza la cioban de capre, Laura stie face
-                  de toate. A trait 15 ani in Spania, 4 ani in Anglia si isi va
-                  trai restul anilor cu Radu unde au ei chef.
-                </p>
-                <p class="descriere-miri">
-                  Pe langa abilitatile ei de a gasi idei inedite oricarei
-                  probleme, ea are un simt al mirosului aproape super uman.
-                </p>
-                <p class="descriere-miri">
-                  Fiind un adevarat "titirez", Laura a fost dintotdeanua
-                  sufletul petrecerii. Un magnet de oameni care militeaza pentru
-                  cauze sociale si care nu este influentata de prejudecati,
-                  fiind in stare sa vada prima data bunatatea din om.
-                </p>
-                <p class="descriere-miri">
-                  Dar Laura nu iubeste doar oamenii, ci si animalele si tot ce
-                  are suflare de viata. Adora natura si este absolut fascinata
-                  de rasarituri si apusuri.
-                </p>
-                <p class="descriere-miri">
-                  Toate aceste lucruri fac din Laura o adevarata forta a
-                  naturii. Un aliat incoruptibil al dreptatii care nu este
-                  interesata de lucruri materiale, ci este ancorata in
-                  adevaratele valori ce ne incojoara, dar pe care oamenii de
-                  rand sunt rareori in stare sa le observe.
-                </p>
-              </div>
-              <div class="step-image-box laura-img">
-                <img src="./images/despre_noi_laura_2_2.PNG" class="step-img" />
-              </div>
-            </div>
-            <div class="radu hide">
-              <div class="step-text-box">
-                <p class="nume-miri">Radu</p>
-                <p class="descriere-miri">
-                 Se zice ca daca ii ceri ajutorul lui Radu, iti va face o prezentare cu un plan in trei parti;
-                 cu inceput, mijloc, si concluzii. Pregateste-te sa iei notite si sa fii bun la ascultat, fiindca le explica destul de complicat.
-                </p>
-                <p class="descriere-miri">
-                  Este extrem de dedicat cand are un tel, dar indeajuns de stoic incat sa stie ca ce este in mana lui Dumnezeu nu necesita interventie.
-                </p>
-                <p class="descriere-miri">
-                 Poate la prima vedere pare retras sau in lumea lui, nu ca nu ar fii cateodata, insa aparenta neatentie tacita este de cele mai multe ori
-                 un proces complex de introspectie, analiza si prezenta deplina.
-                </p>
-                <p class="descriere-miri">
-                 Radu a vazut doua continente, este asul din maneca pentru o multinationala, a invatat sa cante singur la bass, a scris fiecare linie de cod
-                 a site-ului pe care te afli si cu toate acestea, cea mai mare realizare a lui este ca se insoara cu prima lui iubire.
-                </p>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Language Selector</title>
+  <style>
+    /* Styles for the language selector overlay */
+    #language-overlay {
+      position: fixed;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      background-color: rgba(0, 0, 0, 0.75);
+      color: white;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      flex-direction: column;
+      text-align: center;
+      display: none;
+    }
+    .btn-lang {
+      margin: 10px;
+      padding: 10px 20px;
+      background-color: #008CBA;
+      color: white;
+      text-decoration: none;
+      font-size: 18px;
+      border-radius: 5px;
+    }
+    .btn-lang:hover {
+      background-color: #005f73;
+    }
+  </style>
+</head>
+<body>
+  <!-- Language Selection Overlay -->
+  <div id="language-overlay">
+    <h2>Select Your Language</h2>
+    <h2>Alege limba</h2>
+    <a href="/ro/index.html" class="btn-lang">Română</a>
+    <a href="/en/index.html" class="btn-lang">English</a>
+  </div>
 
-                <p class="descriere-miri">
-                 Weekend-ul perfect pentru el este o plimbare prin munti sau vibratiile corzilor de bass dupa o cafeluta expresso fara zahar.
-                </p>
+  <script>
+    document.addEventListener("DOMContentLoaded", function() {
+      // Check if the language preference is already stored in localStorage
+      const language = localStorage.getItem('language');
 
-                <p class="descriere-miri">
-                  Nu se pricepe la toate, insa nu da inapoi de la nimic. Asa se face ca doar intr-o vara a adunat experienta ca si fermier, tata adoptiv la 3 pisici si 2 catelusi, web developer si multe altele.
-                  Singurul lucru pe care refuza absolut sa il faca, este sa manance supa de spanac cu slanina prajita. 
-                </p>
+      if (language === 'ro') {
+        // If Romanian is selected, redirect to Romanian version
+        window.location.href = '/ro/index.html';
+      } else if (language === 'en') {
+        // If English is selected, redirect to English version
+        window.location.href = '/en/index.html';
+      } else {
+        // If no language is selected, show the language selector
+        document.getElementById('language-overlay').style.display = 'flex';
+      }
 
-                <p class="descriere-miri">
-                  In alta ordine de idei, Radu este cel mai calm si linistit om pe care il puteti intalni. Calmantul esential al lui Laura, dar care te poate face sa razi cu lacrimi. 
-                  Efectul comedic fiind amplificat de expresia neutra si tonul semi-serios.
-                </p>
-                <div class="step-image-box radu-img">
-                  <img src="./images/despre_noi_radu_2.png" class="step-img" />
-                </div>
-              </div>
-            </div>
-          </div>
-        </section>
-        <section
-          class="section-povestea-noastra rounded-borders hide"
-          id="povestea-noastra"
-        >
-          <div class="container">
-            <h1 class="heading-primary povestea-noastra-title">
-              Povestea noastra
-            </h1>
-            <p class="povestea-noastra-text">
-              Povestea noastra incepe in 2009,
-            </p>
-          </div>
-        </section>
-        <section class="section-cta" id="cta">
-          <div class="container">
-            <div class="cta background-2 rounded-borders">
-              <div class="cta-text-box">
-                <h2 class="heading-secondary">Confirma prezenta:</h2>
-                <p class="cta-text"></p>
-                <form
-                  action="https://formspree.io/f/xvgpoeqj"
-                  method="POST"
-                  class="cta-form"
-                >
-                  <label class="label-text" for="telefon"
-                    >Numar de telefon</label
-                  >
-                  <input
-                    name="phone-number"
-                    id="telefon"
-                    type="number"
-                    placeholder="Numar de telefon"
-                    required
-                  />
-                  <div class="adulti-copii">
-                    <div class="input-container">
-                      <label class="label-text" for="adulti">Adulti</label>
-                      <input
-                        name="adults"
-                        id="adulti"
-                        type="number"
-                        placeholder="Adulti"
-                        min="0"
-                        required
-                      />
-                    </div>
-                    <div class="input-container">
-                      <label class="label-text" for="copii">Copii</label>
-                      <input
-                        name="children"
-                        id="copii"
-                        type="number"
-                        placeholder="(sub 13 ani)"
-                        min="0"
-                      />
-                    </div>
-                  </div>
-                  <div id="attendees-container">
-                    <!-- Dynamic fields -->
-                  </div>
-                  <button type="submit" class="btn btn--form">Confirma</button>
-                </form>
-              </div>
-              <div
-                class="cta-img-box"
-                role="img"
-                aria-label="photo of autumn flowers"
-              ></div>
-            </div>
-          </div>
-        </section>
-
-        <section class="locatie rounded-borders background-2">
-          <div class="program">
-            <h1 class="heading-primary heading-color-1">Program:</h1>
-            <p class="descriere-miri">12:00 Cununia religioasa</p>
-            <p class="descriere-miri">14:00 Masa festiva</p>
-          </div>
-          <div class="locatie-text">
-            <h1 class="heading-primary heading-color-1">Locatie:</h1>
-            <p class="descriere-miri">Pensiunea Festival Ticau</p>
-            <p class="descriere-miri">Ticau 90B - 437355, Maramures</p>
-          </div>
-          <div class="container" id="map"></div>
-        </section>
-        <section
-          class="section-gallery rounded-borders background-1"
-          id="gallery"
-        >
-          <div class="container margin-top">
-            <div id="carouselExampleIndicators" class="carousel slide">
-              <div class="carousel-inner">
-                <div class="carousel-item active">
-                  <img
-                    src="./images/gallery/gallery-8.JPEG"
-                    class="d-block w-100"
-                    alt="..."
-                  />
-                </div>
-                <div class="carousel-item">
-                  <img
-                    src="./images/gallery/gallery-11.JPEG"
-                    class="d-block w-100"
-                    alt="..."
-                  />
-                </div>
-                <div class="carousel-item">
-                  <img
-                    src="./images/gallery/gallery-3.JPEG"
-                    class="d-block w-100"
-                    alt="..."
-                  />
-                </div>
-                <div class="carousel-item">
-                  <img
-                    src="./images/gallery/gallery-19.JPG"
-                    class="d-block w-100"
-                    alt="..."
-                  />
-                </div>
-                <div class="carousel-item">
-                  <img
-                    src="./images/gallery/gallery-20.JPG"
-                    class="d-block w-100"
-                    alt="..."
-                  />
-                </div>
-                <div class="carousel-item">
-                  <img
-                    src="./images/gallery/gallery-21.JPG"
-                    class="d-block w-100"
-                    alt="..."
-                  />
-                </div>
-                <div class="carousel-item">
-                  <img
-                    src="./images/gallery/gallery-22.JPG"
-                    class="d-block w-100"
-                    alt="..."
-                  />
-                </div>
-                <div class="carousel-item">
-                  <img
-                    src="./images/gallery/gallery-7.JPEG"
-                    class="d-block w-100"
-                    alt="..."
-                  />
-                </div>
-                <div class="carousel-item">
-                  <img
-                    src="./images/gallery/gallery-23.jpg"
-                    class="d-block w-100"
-                    alt="..."
-                  />
-                </div>
-                <div class="carousel-item">
-                  <img
-                    src="./images/gallery/gallery-24.jpg"
-                    class="d-block w-100"
-                    alt="..."
-                  />
-                </div>
-                <div class="carousel-item">
-                  <img
-                    src="./images/gallery/gallery-25.jpg"
-                    class="d-block w-100"
-                    alt="..."
-                  />
-                </div>
-                <div class="carousel-item">
-                  <img
-                    src="./images/gallery/gallery-26.jpg"
-                    class="d-block w-100"
-                    alt="..."
-                  />
-                </div>
-              </div>
-              <button
-                class="carousel-control-prev"
-                type="button"
-                data-bs-target="#carouselExampleIndicators"
-                data-bs-slide="prev"
-              >
-                <span
-                  class="carousel-control-prev-icon"
-                  aria-hidden="true"
-                ></span>
-                <span class="visually-hidden">Previous</span>
-              </button>
-              <button
-                class="carousel-control-next"
-                type="button"
-                data-bs-target="#carouselExampleIndicators"
-                data-bs-slide="next"
-              >
-                <span
-                  class="carousel-control-next-icon"
-                  aria-hidden="true"
-                ></span>
-                <span class="visually-hidden">Next</span>
-              </button>
-            </div>
-          </div>
-          <p class="photo-description">La inaltime pe Creasta Cocosului</p>
-        </section>
-      </main>
-    </div>
-    <div
-      class="modal fade"
-      id="contactModal"
-      tabindex="-1"
-      aria-labelledby="contactModalLabel"
-      aria-hidden="true"
-    >
-      <div class="modal-dialog modal-dialog-centered">
-        <div class="modal-content">
-          <div class="modal-header">
-            <h5 class="modal-title" id="contactModalLabel">Contacteaza-ne</h5>
-            <button
-              type="button"
-              class="close"
-              data-bs-dismiss="modal"
-              aria-label="close"
-            ></button>
-          </div>
-          <div class="modal-body">
-            <p class="modal-contact-name heading-secondary">
-              Radu: <a href="tel:+40771567728">0771567728</a>
-            </p>
-            <p class="modal-contact-name heading-secondary">
-              Laura: <a href="tel:+40757339435">0757339435</a>
-            </p>
-          </div>
-          <div class="modal-footer">
-            <button
-              type="button"
-              class="btn--close-modal"
-              data-bs-dismiss="modal"
-            >
-              Inchide
-            </button>
-          </div>
-        </div>
-      </div>
-    </div>
-  </body>
+      // Store the selected language and redirect the user
+      document.querySelectorAll('.btn-lang').forEach(button => {
+        button.addEventListener('click', function(e) {
+          e.preventDefault();
+          const lang = this.getAttribute('href').includes('/ro/') ? 'ro' : 'en';
+          localStorage.setItem('language', lang);
+          window.location.href = this.getAttribute('href');
+        });
+      });
+    });
+  </script>
+</body>
 </html>
