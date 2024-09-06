@@ -7,54 +7,6 @@ const btnNavEl = document.querySelector(".btn-mobile-nav");
 const headerEl = document.querySelector(".header");
 const mapEl = document.getElementById('map');
 
-const translations = {
-  ro: {
-    welcome: "Esti invitat la nunta noastra!",
-    date: "9 Noiembrie 2024",
-    confirm: "Confirma prezenta",
-    contact: "Contacteaza-ne",
-    about: "Despre noi",
-    gallery: "Galerie",
-    location: "Locatie",
-    rsvp: "Confirma prezenta",
-  },
-  en: {
-    welcome: "You are invited to our wedding!",
-    date: "November 9, 2024",
-    confirm: "RSVP",
-    contact: "Contact us",
-    about: "About us",
-    gallery: "Gallery",
-    location: "Location",
-    rsvp: "RSVP",
-  }
-};
-
-function changeLanguage() {
-  const selectedLanguage = document.getElementById('language-selector').value;
-  // localStorage.setItem('preferredLanguage', selectedLanguage);
-  applyTranslations(selectedLanguage);
-}
-
-function applyTranslations(lang) {
-  document.querySelector('.heading-primary').textContent = translations[lang].welcome;
-  document.querySelector('.date').textContent = translations[lang].date;
-  document.querySelector('.btn--full').textContent = translations[lang].confirm;
-  document.querySelector('[data-bs-target="#contactModal"]').textContent = translations[lang].contact;
-  
-  // Update navigation links
-  document.querySelector('a[href="#despre-noi"]').textContent = translations[lang].about;
-  document.querySelector('a[href="#gallery"]').textContent = translations[lang].gallery;
-  document.querySelector('a[href="#map"]').textContent = translations[lang].location;
-  document.querySelector('.nav-cta').textContent = translations[lang].rsvp;
-}
-
-// Load the saved language or default to Romanian on page load
-// window.onload = function() {
-//   const savedLanguage = localStorage.getItem('preferredLanguage') || 'ro';
-//   document.getElementById('language-selector').value = savedLanguage;
-//   applyTranslations(savedLanguage);
-// };
 
 
 var x = setInterval(function () {
