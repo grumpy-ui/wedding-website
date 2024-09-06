@@ -1,1 +1,438 @@
+<!DOCTYPE html>
+<html lang="ro">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Laura and Radu</title>
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH"
+      crossorigin="anonymous"
+    />
+    <link rel="stylesheet" href="styles.css" />
+    <link rel="stylesheet" href="queries.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Briem+Hand:wght@100..900&family=Dancing+Script:wght@400..700&display=swap"
+      rel="stylesheet"
+    />
+    <script src="script.js" defer></script>
+    <script src="https://cdn.jsdelivr.net/npm/rellax@1.12.1/rellax.min.js"></script>
+    <script
+      type="module"
+      src="https://unpkg.com/ionicons@5.4.0/dist/ionicons/ionicons.esm.js"
+    ></script>
+    <script
+      nomodule=""
+      src="https://unpkg.com/ionicons@5.4.0/dist/ionicons/ionicons.js"
+    ></script>
+    <script
+      src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAxKVE2ZgfGUMC23N7aHtz123VrNu4fcOU&callback=initMap"
+      defer
+    ></script>
+  </head>
+  <body>
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
+      crossorigin="anonymous"
+    ></script>
+    <div class="background"></div>
+    <div class="main">
+      <main>
+        <div class="intro rounded-borders background-1">
+          <header class="header">
+            <img
+              class="logo"
+              alt="lauradu logo"
+              src="./images/logo_transparent.PNG"
+            />
+            <nav class="main-nav">
+              <ul class="main-nav-list">
+                <li>
+                  <a class="main-nav-link" href="#despre-noi">About us</a>
+                </li>
+                <li><a class="main-nav-link" href="#gallery">Gallery</a></li>
+                <li><a class="main-nav-link" href="#map">Location</a></li>
+                <li>
+                  <a class="main-nav-link nav-cta" href="#cta">RSVP</a>
+                </li>
+              </ul>
+            </nav>
+            <button class="btn-mobile-nav">
+              <ion-icon
+                id="icon"
+                class="icon-mobile-nav"
+                name="menu-outline"
+              ></ion-icon>
+              <ion-icon class="icon-mobile-nav" name="close-outline"></ion-icon>
+            </button>
+          </header>
+          <section class="section-hero">
+            <div class="hero">
+              <div class="hero-text-box">
+                <h1 class="heading-primary">
+                  You've been invited to our wedding!
+                </h1>
+                <div class="countdown-container">
+                  <p class="date">9 November 2024</p>
+                  <div id="countdown"></div>
+                </div>
+                <a href="#cta" class="btn btn--full">RSVP &darr;</a>
+                <a
+                  href="#"
+                  class="btn btn--full"
+                  data-bs-toggle="modal"
+                  data-bs-target="#contactModal"
+                >
+                  Call us
+                </a>
+              </div>
+            </div>
+          </section>
+        </div>
+        <section
+          class="section-despre-noi rounded-borders background-2"
+          id="despre-noi"
+        >
+          <div class="container despre-noi-header">
+            <span class="heading-primary cine-sunt-mirii">About us</span>
+            <div class="switch-buttons">
+              <p class="btn-radu active-btn">Radu</p>
+              <p class="btn-laura">Laura</p>
+            </div>
+          </div>
+          <div class="container grid grid--1-col">
+            <div class="laura">
+              <div class="step-text-box">
+                <p class="nume-miri">Laura</p>
+                <p class="descriere-miri">
+                  The legend says that if you put Laura in a room with 100
+                  people, she will make 101 friends.
+                </p>
+                <p class="descriere-miri">
+                  From english teacher to goat farmer, Laura knows it all. She
+                  lived 15 years in Spain, 4 years in England, and she'll live
+                  the rest of the days with Radu wherever they want.
+                </p>
+                <p class="descriere-miri">
+                  Besides her ability to find innovative solutions to every
+                  problem, she has an almost super-human sense of smell.
+                </p>
+                <p class="descriere-miri">
+                  With her inexhaustible energy, Laura has always been the life
+                  of the party. A people magnet that advocates for social
+                  causes, always seeing the goodness in people and refusing to
+                  be influenced by prejudices.
+                </p>
+                <p class="descriere-miri">
+                  But Laura doesn't love only humnas, but animals too and
+                  everything that has life. She's enamored with nature and she's
+                  absolutely fascinated by sunsets and sunrises.
+                </p>
+                <p class="descriere-miri">
+                  All these things make Laura a true force of nature. An
+                  incorruptible ally of truth who is not interested in material
+                  possesions, choosing instead to be anchored in meaningful
+                  values that us, normal people, are rarely able or willing to
+                  observe.
+                </p>
+              </div>
+              <div class="step-image-box laura-img">
+                <img src="./images/despre_noi_laura_2_2.PNG" class="step-img" />
+              </div>
+            </div>
+            <div class="radu hide">
+              <div class="step-text-box">
+                <p class="nume-miri">Radu</p>
+                <p class="descriere-miri">
+                  They say that if you ask Radu for help, he will prepare a 3
+                  part presentation. I hope you are prepared to take notes and
+                  are a good listener.
+                </p>
+                <p class="descriere-miri">
+                  He is extremely dedicated to whatever he put his mind to, but
+                  he is stoic enough to realise that what's in God's hands
+                  doesn't deserve stressing over.
+                </p>
+                <p class="descriere-miri">
+                  At first glance, he may seem withdrawn or in his own world,
+                  and sometimes he is, but the seemingly silent inattention is
+                  most often a complex process of introspection, analysis, and
+                  full presence.
+                </p>
+                <p class="descriere-miri">
+                  Radu has seen two continents, he is the ace up the sleeve for
+                  a multinational company, he taught himself to play bass, he
+                  wrote every line of code on the website you are on, and yet,
+                  his greatest achievement is that he is marrying his first
+                  love.
+                </p>
 
+                <p class="descriere-miri">
+                  The perfect weekend for him is a walk in the mountains or the
+                  vibrations of bass strings after a small sugar-free expresso.
+                </p>
+
+                <p class="descriere-miri">
+                  He doesn't know how to do everything, but he doesn't shy away
+                  from anything. That's how, in just one summer, he gained
+                  experience as a farmer, adoptive father to 3 cats and 2
+                  puppies, web developer, and much more. The only thing he
+                  absolutely refuses to do is eat spinach soup with fried pork.
+                </p>
+
+                <p class="descriere-miri">
+                  On another note, Radu is the calmest and most serene person
+                  you could meet. His essential calmness, which is Laura's
+                  soothing presence, can also make you laugh until you cry. The
+                  comedic effect is amplified by his neutral expression and
+                  semi-serious tone.
+                </p>
+                <div class="step-image-box radu-img">
+                  <img src="./images/despre_noi_radu_2.png" class="step-img" />
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+        <section
+          class="section-povestea-noastra rounded-borders hide"
+          id="povestea-noastra"
+        >
+        </section>
+        <section class="section-cta" id="cta">
+          <div class="container">
+            <div class="cta background-2 rounded-borders">
+              <div class="cta-text-box">
+                <h2 class="heading-secondary">Confirm your presence:</h2>
+                <p class="cta-text"></p>
+                <form
+                  action="https://formspree.io/f/xvgpoeqj"
+                  method="POST"
+                  class="cta-form"
+                >
+                  <label class="label-text" for="telefon"
+                    >Phone number</label
+                  >
+                  <input
+                    name="phone-number"
+                    id="telefon"
+                    type="number"
+                    placeholder="Numar de telefon"
+                    required
+                  />
+                  <div class="adulti-copii">
+                    <div class="input-container">
+                      <label class="label-text" for="adulti">Adults</label>
+                      <input
+                        name="adults"
+                        id="adulti"
+                        type="number"
+                        placeholder="Adults"
+                        min="0"
+                        required
+                      />
+                    </div>
+                    <div class="input-container">
+                      <label class="label-text" for="copii">Children</label>
+                      <input
+                        name="children"
+                        id="copii"
+                        type="number"
+                        placeholder="Children under 13 years"
+                        min="0"
+                      />
+                    </div>
+                  </div>
+                  <div id="attendees-container">
+                    <!-- Dynamic fields -->
+                  </div>
+                  <button type="submit" class="btn btn--form">Confirm</button>
+                </form>
+              </div>
+              <div
+                class="cta-img-box"
+                role="img"
+                aria-label="photo of autumn flowers"
+              ></div>
+            </div>
+          </div>
+        </section>
+
+        <section class="locatie rounded-borders background-2">
+          <div class="program">
+            <h1 class="heading-primary heading-color-1">Program:</h1>
+            <p class="descriere-miri">12:00 Religious ceremony</p>
+            <p class="descriere-miri">14:00 Party</p>
+          </div>
+          <div class="locatie-text">
+            <h1 class="heading-primary heading-color-1">Location:</h1>
+            <p class="descriere-miri">Pensiunea Festival Ticau</p>
+            <p class="descriere-miri">Ticau 90B - 437355, Maramures</p>
+          </div>
+          <div class="container" id="map"></div>
+        </section>
+        <section
+          class="section-gallery rounded-borders background-1"
+          id="gallery"
+        >
+          <div class="container margin-top">
+            <div id="carouselExampleIndicators" class="carousel slide">
+              <div class="carousel-inner">
+                <div class="carousel-item active">
+                  <img
+                    src="./images/gallery/gallery-8.JPEG"
+                    class="d-block w-100"
+                    alt="..."
+                  />
+                </div>
+                <div class="carousel-item">
+                  <img
+                    src="./images/gallery/gallery-11.JPEG"
+                    class="d-block w-100"
+                    alt="..."
+                  />
+                </div>
+                <div class="carousel-item">
+                  <img
+                    src="./images/gallery/gallery-3.JPEG"
+                    class="d-block w-100"
+                    alt="..."
+                  />
+                </div>
+                <div class="carousel-item">
+                  <img
+                    src="./images/gallery/gallery-19.JPG"
+                    class="d-block w-100"
+                    alt="..."
+                  />
+                </div>
+                <div class="carousel-item">
+                  <img
+                    src="./images/gallery/gallery-20.JPG"
+                    class="d-block w-100"
+                    alt="..."
+                  />
+                </div>
+                <div class="carousel-item">
+                  <img
+                    src="./images/gallery/gallery-21.JPG"
+                    class="d-block w-100"
+                    alt="..."
+                  />
+                </div>
+                <div class="carousel-item">
+                  <img
+                    src="./images/gallery/gallery-22.JPG"
+                    class="d-block w-100"
+                    alt="..."
+                  />
+                </div>
+                <div class="carousel-item">
+                  <img
+                    src="./images/gallery/gallery-7.JPEG"
+                    class="d-block w-100"
+                    alt="..."
+                  />
+                </div>
+                <div class="carousel-item">
+                  <img
+                    src="./images/gallery/gallery-23.jpg"
+                    class="d-block w-100"
+                    alt="..."
+                  />
+                </div>
+                <div class="carousel-item">
+                  <img
+                    src="./images/gallery/gallery-24.jpg"
+                    class="d-block w-100"
+                    alt="..."
+                  />
+                </div>
+                <div class="carousel-item">
+                  <img
+                    src="./images/gallery/gallery-25.jpg"
+                    class="d-block w-100"
+                    alt="..."
+                  />
+                </div>
+                <div class="carousel-item">
+                  <img
+                    src="./images/gallery/gallery-26.jpg"
+                    class="d-block w-100"
+                    alt="..."
+                  />
+                </div>
+              </div>
+              <button
+                class="carousel-control-prev"
+                type="button"
+                data-bs-target="#carouselExampleIndicators"
+                data-bs-slide="prev"
+              >
+                <span
+                  class="carousel-control-prev-icon"
+                  aria-hidden="true"
+                ></span>
+                <span class="visually-hidden">Previous</span>
+              </button>
+              <button
+                class="carousel-control-next"
+                type="button"
+                data-bs-target="#carouselExampleIndicators"
+                data-bs-slide="next"
+              >
+                <span
+                  class="carousel-control-next-icon"
+                  aria-hidden="true"
+                ></span>
+                <span class="visually-hidden">Next</span>
+              </button>
+            </div>
+          </div>
+        </section>
+      </main>
+    </div>
+    <div
+      class="modal fade"
+      id="contactModal"
+      tabindex="-1"
+      aria-labelledby="contactModalLabel"
+      aria-hidden="true"
+    >
+      <div class="modal-dialog modal-dialog-centered">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title" id="contactModalLabel">Call us</h5>
+            <button
+              type="button"
+              class="close"
+              data-bs-dismiss="modal"
+              aria-label="close"
+            ></button>
+          </div>
+          <div class="modal-body">
+            <p class="modal-contact-name heading-secondary">
+              Radu: <a href="tel:+40771567728">0771567728</a>
+            </p>
+            <p class="modal-contact-name heading-secondary">
+              Laura: <a href="tel:+40757339435">0757339435</a>
+            </p>
+          </div>
+          <div class="modal-footer">
+            <button
+              type="button"
+              class="btn--close-modal"
+              data-bs-dismiss="modal"
+            >
+              Close
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>
