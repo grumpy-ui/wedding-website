@@ -5,9 +5,11 @@ const btnRadu = document.querySelector(".btn-radu");
 const btnLaura = document.querySelector(".btn-laura");
 const btnNavEl = document.querySelector(".btn-mobile-nav");
 const headerEl = document.querySelector(".header");
-const mapEl = document.getElementById('map');
-
-
+const mapEl = document.getElementById("map");
+const churchBtn = document.getElementById("btn-church");
+const partyBtn = document.getElementById("btn-party");
+const salsigLocTxt = document.querySelector(".salsig");
+const ticauLocTxt = document.querySelector(".ticau");
 
 var x = setInterval(function () {
   var now = new Date().getTime();
@@ -74,24 +76,21 @@ allLinks.forEach(function (link) {
   });
 });
 
-
 function initMap() {
   // Define coordinates for each location
   const churchLocation = { lat: 47.521416, lng: 23.294013 };
-  const partyLocation = { lat: 47.4377505,lng: 23.2944917}
+  const partyLocation = { lat: 47.4377505, lng: 23.2944917 };
 
   const map = new google.maps.Map(document.getElementById("map"), {
     zoom: 14,
-    center: churchLocation, 
+    center: churchLocation,
   });
-
 
   let marker = new google.maps.Marker({
     position: churchLocation,
     map: map,
     title: "Religious Ceremony",
   });
-
 
   function updateMap(location, title) {
     // Remove the current marker
@@ -110,10 +109,14 @@ function initMap() {
 
   // Add event listeners to switch between locations when buttons are clicked
   document.getElementById("btn-church").addEventListener("click", function () {
+    salsigLocTxt.classList.remove("hide");
+    ticauLocTxt.classList.add("hide");
     updateMap(churchLocation, "Religious Ceremony");
   });
 
   document.getElementById("btn-party").addEventListener("click", function () {
+    ticauLocTxt.classList.remove("hide");
+    salsigLocTxt.classList.add("hide");
     updateMap(partyLocation, "Party Venue");
   });
 
@@ -125,12 +128,13 @@ function initMap() {
 
   // Attach a click listener to the map that opens Google Maps
   mapEl.addEventListener("click", function () {
-    const currentLocation = marker.getPosition();  
-    openGoogleMapsApp({ lat: currentLocation.lat(), lng: currentLocation.lng() });
+    const currentLocation = marker.getPosition();
+    openGoogleMapsApp({
+      lat: currentLocation.lat(),
+      lng: currentLocation.lng(),
+    });
   });
 }
-
-
 
 document.addEventListener("DOMContentLoaded", () => {
   const adultsInput = document.getElementById("adulti");

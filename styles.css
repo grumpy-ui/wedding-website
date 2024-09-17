@@ -120,13 +120,7 @@ body {
   justify-content: center;
 }
 
-.btn-radu,
-.btn-laura {
-  font-size: 3.2rem;
-  display: inline-flex;
-  align-items: center;
-  color: #fff;
-}
+
 
 .active {
   color: #fdf2e9;
@@ -303,9 +297,11 @@ body {
   margin-bottom: 20px;
 }
 
-/* General button styling */
-.btn-location {
-  background-color: #fdf2e9;  /* Warm orange color */
+
+.btn-location,
+.btn-radu,
+.btn-laura {
+  background-color: #a5a5a5;  /* Warm orange color */
   border: none;
   color: #272727;
   padding: 10px 20px;
@@ -321,21 +317,27 @@ body {
 }
 
 /* Hover effect for buttons */
-.btn-location:hover {
-  background-color: #d4881f;  /* Darker orange on hover */
+.btn-location:hover,
+.btn-radu:hover,
+.btn-laura:hover {
+  background-color: #ffffff;  /* Darker orange on hover */
   transform: translateY(-2px); /* Lift the button slightly */
 }
 
 /* Active button styling */
-.btn-location:active {
-  background-color: #c57619;
+.btn-location:active,
+.btn-radu:active,
+.btn-laura:active {
+  background-color: #706c6c;
   transform: translateY(1px); /* Slight push down */
 }
 
 /* Button focus style for keyboard navigation */
-.btn-location:focus {
+.btn-location:focus,
+.btn-radu:focus,
+.btn-laura:focus {
   outline: none;
-  box-shadow: 0 0 5px #f5a623;
+  box-shadow: 0 0 5px #473b28;
 }
 
 
@@ -537,10 +539,6 @@ body {
 .btn--gallery {
   grid-column: 4;
   font-family: sans-serif;
-}
-.active-btn {
-  color: #272727;
-  background-color: #fff;
 }
 
 .modal-contact-name a {

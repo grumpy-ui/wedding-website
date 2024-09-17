@@ -100,7 +100,7 @@
           <div class="container despre-noi-header">
             <span class="heading-primary cine-sunt-mirii">About us</span>
             <div class="switch-buttons">
-              <p class="btn-radu active-btn">Radu</p>
+              <p class="btn-radu">Radu</p>
               <p class="btn-laura">Laura</p>
             </div>
           </div>
@@ -141,7 +141,10 @@
                 </p>
               </div>
               <div class="step-image-box laura-img">
-                <img src="../images/despre_noi_laura_2_2.PNG" class="step-img" />
+                <img
+                  src="../images/despre_noi_laura_2_2.PNG"
+                  class="step-img"
+                />
               </div>
             </div>
             <div class="radu hide">
@@ -201,8 +204,7 @@
         <section
           class="section-povestea-noastra rounded-borders hide"
           id="povestea-noastra"
-        >
-        </section>
+        ></section>
         <section class="section-cta" id="cta">
           <div class="container">
             <div class="cta background-2 rounded-borders">
@@ -214,9 +216,7 @@
                   method="POST"
                   class="cta-form"
                 >
-                  <label class="label-text" for="telefon"
-                    >Phone number</label
-                  >
+                  <label class="label-text" for="telefon">Phone number</label>
                   <input
                     name="phone-number"
                     id="telefon"
@@ -265,14 +265,24 @@
         <section class="locatie rounded-borders background-2">
           <div class="program">
             <h1 class="heading-primary heading-color-1">Program:</h1>
-            <p class="descriere-miri">12:00 Religious ceremony</p>
-            <p class="descriere-miri">14:00 Party</p>
+            <p class="descriere-miri">12:00 Cununia religioasa</p>
+            <p class="descriere-miri">14:00 Masa festiva</p>
           </div>
-          <div class="locatie-text">
+          <div class="location-buttons">
+            <button id="btn-church" class="btn-location">Church</button>
+            <button id="btn-party" class="btn-location">Restaurant</button>
+          </div>
+          <div class="locatie-text ticau">
             <h1 class="heading-primary heading-color-1">Location:</h1>
-            <p class="descriere-miri">Pensiunea Festival Ticau</p>
+            <p class="descriere-miri">Festival Restaurant</p>
             <p class="descriere-miri">Ticau 90B - 437355, Maramures</p>
           </div>
+          <div class="locatie-text salsig hide">
+            <h1 class="heading-primary heading-color-1">Location:</h1>
+            <p class="descriere-miri">Salsig Pentecostal Church</p>
+            <p class="descriere-miri">Salsig, 323 - 437300, Maramures</p>
+          </div>
+
           <div class="container" id="map"></div>
         </section>
         <section
