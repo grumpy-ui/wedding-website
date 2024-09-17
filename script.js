@@ -31,15 +31,15 @@ var x = setInterval(function () {
 btnRadu.addEventListener("click", () => {
   radu.classList.remove("hide");
   laura.classList.add("hide");
-  btnRadu.classList.remove("active-btn");
-  btnLaura.classList.add("active-btn");
+  btnRadu.classList.add("btn-active");
+  btnLaura.classList.remove("btn-active");
 });
 
 btnLaura.addEventListener("click", () => {
   laura.classList.remove("hide");
   radu.classList.add("hide");
-  btnLaura.classList.remove("active-btn");
-  btnRadu.classList.add("active-btn");
+  btnLaura.classList.add("btn-active");
+  btnRadu.classList.remove("btn-active");
 });
 
 //Mobile navigation
@@ -111,12 +111,16 @@ function initMap() {
   document.getElementById("btn-church").addEventListener("click", function () {
     salsigLocTxt.classList.remove("hide");
     ticauLocTxt.classList.add("hide");
+    churchBtn.classList.add('btn-active')
+    partyBtn.classList.remove('btn-active')
     updateMap(churchLocation, "Religious Ceremony");
   });
 
   document.getElementById("btn-party").addEventListener("click", function () {
     ticauLocTxt.classList.remove("hide");
     salsigLocTxt.classList.add("hide");
+    partyBtn.classList.add('btn-active');
+    churchBtn.classList.remove('btn-active');
     updateMap(partyLocation, "Party Venue");
   });
 

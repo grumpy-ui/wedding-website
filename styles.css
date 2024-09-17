@@ -122,9 +122,7 @@ body {
 
 
 
-.active {
-  color: #fdf2e9;
-}
+
 
 .btn-radu:hover,
 .btn-laura:hover {
@@ -317,11 +315,9 @@ body {
 }
 
 /* Hover effect for buttons */
-.btn-location:hover,
-.btn-radu:hover,
-.btn-laura:hover {
-  background-color: #ffffff;  /* Darker orange on hover */
-  transform: translateY(-2px); /* Lift the button slightly */
+.btn-active {
+  background-color: #ffffff;  
+  transform: translateY(-2px); 
 }
 
 /* Active button styling */
@@ -572,3 +568,12 @@ body {
   transform: scale(200%);
 }
 
+.footer {
+  position: relative;
+  bottom: 0;
+  width: 100%;
+  background-color: #f8f9fa60;
+  font-family: Arial, Helvetica, sans-serif;
+  color: #fffafa;
+  padding: 10px 0;
+}
