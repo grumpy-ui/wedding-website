@@ -76,38 +76,60 @@ allLinks.forEach(function (link) {
 
 
 function initMap() {
-  const location = { lat: 47.4377691, lng: 23.2969981 };
+  // Define coordinates for each location
+  const churchLocation = { lat: 47.521416, lng: 23.294013 };
+  const partyLocation = { lat: 47.4377505,lng: 23.2944917}
 
-  // Create the map
   const map = new google.maps.Map(document.getElementById("map"), {
     zoom: 14,
-    center: location,
+    center: churchLocation, 
   });
 
-  const locatie = document.querySelector(".locatie");
 
-  // Create a marker
-  const marker = new google.maps.Marker({
-    position: location,
+  let marker = new google.maps.Marker({
+    position: churchLocation,
     map: map,
+    title: "Religious Ceremony",
   });
 
-  // Add a click listener on the map
-  function isMobileDevice() {
-    return /Mobi|Android/i.test(navigator.userAgent);
+
+  function updateMap(location, title) {
+    // Remove the current marker
+    marker.setMap(null);
+
+    // Create a new marker at the new location
+    marker = new google.maps.Marker({
+      position: location,
+      map: map,
+      title: title,
+    });
+
+    // Center the map on the new location
+    map.setCenter(location);
   }
 
-  function openGoogleMapsApp() {
-    const location = { lat: 47.4377691, lng: 23.2969981 };
+  // Add event listeners to switch between locations when buttons are clicked
+  document.getElementById("btn-church").addEventListener("click", function () {
+    updateMap(churchLocation, "Religious Ceremony");
+  });
 
+  document.getElementById("btn-party").addEventListener("click", function () {
+    updateMap(partyLocation, "Party Venue");
+  });
+
+  // Function to open Google Maps with the current location
+  function openGoogleMapsApp(location) {
     const url = `https://www.google.com/maps/search/?api=1&query=${location.lat},${location.lng}`;
-
-    // Open Google Maps in a new tab or window
     window.open(url, "_blank");
   }
 
-  mapEl.addEventListener("click", openGoogleMapsApp);
+  // Attach a click listener to the map that opens Google Maps
+  mapEl.addEventListener("click", function () {
+    const currentLocation = marker.getPosition();  
+    openGoogleMapsApp({ lat: currentLocation.lat(), lng: currentLocation.lng() });
+  });
 }
+
 
 
 document.addEventListener("DOMContentLoaded", () => {

@@ -296,6 +296,49 @@ body {
   margin-bottom: 3.2rem;
 }
 
+/* Styling for the container of buttons */
+.location-buttons {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 20px;
+}
+
+/* General button styling */
+.btn-location {
+  background-color: #fdf2e9;  /* Warm orange color */
+  border: none;
+  color: #272727;
+  padding: 10px 20px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  margin: 0 10px;
+  border-radius: 5px;
+  transition: background-color 0.3s, transform 0.2s;
+  cursor: pointer;
+  box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+/* Hover effect for buttons */
+.btn-location:hover {
+  background-color: #d4881f;  /* Darker orange on hover */
+  transform: translateY(-2px); /* Lift the button slightly */
+}
+
+/* Active button styling */
+.btn-location:active {
+  background-color: #c57619;
+  transform: translateY(1px); /* Slight push down */
+}
+
+/* Button focus style for keyboard navigation */
+.btn-location:focus {
+  outline: none;
+  box-shadow: 0 0 5px #f5a623;
+}
+
+
 #map {
   height: 500px;
   width: 100%;
