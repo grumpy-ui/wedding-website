@@ -1,0 +1,38 @@
+body {
+    font-family: "Dancing Script", sans-serif;
+    background-image: url(../images/background_6.jpeg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+  }
+  #language-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    color: #ffffff;
+    font-family: "Dancing Script", sans-serif;
+    background-image: url(../images/background_6.jpeg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    text-align: center;
+    display: none;
+  }
+  .btn-lang {
+    margin: 10px;
+    padding: 10px 20px;
+    background-color: #ffffff;
+    color: #434040;
+    text-decoration: none;
+    font-size: 18px;
+    border-radius: 5px;
+  }
+  .btn-lang:hover {
+    background-color: #e8e6e6;
+  }
