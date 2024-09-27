@@ -6,17 +6,18 @@
     <title>Photo Upload</title>
     <style>
       #gallery img {
-        width: 100px;
+        width: 40%;
         height: auto;
         margin: 10px;
+        border: 10px solid black;
       }
     </style>
   </head>
   <body>
-    <h1>Upload Your Photos</h1>
+    <h1>Incarca poze</h1>
     <form id="uploadForm" enctype="multipart/form-data">
       <input type="file" id="fileInput" accept="image/*" />
-      <button type="submit">Upload</button>
+      <button type="submit">Incarca</button>
     </form>
 
     <h2>Last 10 Photos</h2>
@@ -38,7 +39,7 @@
       const storage = firebase.storage();
       const db = firebase.firestore();
     </script>
-    <script src="/backend/firebase.js"></script> 
+    <script src="/backend/firebase.js"></script>
     <script src="/scripts/upload.js"></script>
   </body>
 </html>
