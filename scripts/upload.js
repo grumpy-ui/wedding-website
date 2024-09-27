@@ -22,16 +22,20 @@ uploadForm.addEventListener("submit", async (e) => {
       alert("Error uploading file");
     },
     async () => {
-      const downloadURL = await getDownloadURL(uploadTask.snapshot.ref); // Corrected getDownloadURL usage
+      const downloadURL = await getDownloadURL(uploadTask.snapshot.ref);
+  
+      // Store image metadata in Firestore with the public download URL
       await addDoc(collection(db, "photos"), {
-        url: downloadURL,
+        url: downloadURL,  
         status: "pending",
         createdAt: serverTimestamp(),
       });
+  
       alert("File uploaded successfully!");
       loadLast10Images();
     }
   );
+  
 });
 
 const loadLast10Images = async () => {
