@@ -3,26 +3,28 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="/css/upload.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Briem+Hand:wght@100..900&family=Dancing+Script:wght@400..700&display=swap"
+      rel="stylesheet"
+    />
     <title>Photo Upload</title>
-    <style>
-      #gallery img {
-        width: 40%;
-        height: auto;
-        margin: 10px;
-        border: 10px solid black;
-        border-radius: 4px;
-      }
-    </style>
   </head>
   <body>
-    <h1>Upload Your Photos</h1>
-    <form id="uploadForm" enctype="multipart/form-data">
-      <input type="file" id="fileInput" accept="image/*" />
-      <button type="submit">Upload</button>
-    </form>
-
-    <h2>Last 10 Photos</h2>
-    <div id="gallery"></div>
+    <div class="background"></div>
+    <header>
+      <h1>Scriem povestea impreuna</h1>
+      <form id="uploadForm" enctype="multipart/form-data">
+        <input type="file" id="fileInput" accept="image/*" />
+        <button type="submit">Incarca</button>
+      </form>
+      <h2>Ultimele 10 poze</h2>
+    </header>
+    <main>
+      <div id="gallery"></div>
+    </main>
     <script type="module" src="/backend/firebase.js"></script>
     <script type="module" src="/scripts/upload.js"></script>
   </body>
