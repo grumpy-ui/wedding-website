@@ -12,6 +12,8 @@ body {
   overflow-x: hidden;
 }
 
+
+
 .background {
   position: fixed;
   top: 0;
@@ -27,6 +29,13 @@ body {
 
 header {
     color: #fff;
+}
+
+#progressBar {
+    width: 50%;
+    height: 20px;
+    margin-top: 10px;
+    display: none;
 }
 
 #gallery {
@@ -45,3 +54,4 @@ header {
   border-radius: 4px;
   margin: 1rem auto;
 }
+

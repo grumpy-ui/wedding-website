@@ -17,9 +17,10 @@
     <header>
       <h1>Scriem povestea impreuna</h1>
       <form id="uploadForm" enctype="multipart/form-data">
-        <input type="file" id="fileInput" accept="image/*" />
-        <button type="submit">Incarca</button>
+        <input class="btn" type="file" id="fileInput" accept="image/*" />
+        <button class="btn btn-upload" type="submit">Incarca</button>
       </form>
+      <progress id="progressBar" value="0" max="100"></progress>
       <h2>Ultimele 10 poze</h2>
     </header>
     <main>
