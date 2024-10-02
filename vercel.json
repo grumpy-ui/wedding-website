@@ -1,0 +1,17 @@
+{
+    "rewrites": [
+      {
+        "source": "/upload",
+        "destination": "/pages/upload.html"
+      },
+      {
+        "source": "/moderation",
+        "destination": "/pages/moderation.html"
+      },
+      {
+        "source": "/",
+        "destination": "/index.html"
+      }
+    ]
+  }
+  
