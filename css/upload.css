@@ -77,7 +77,16 @@ header {
 }
 
 .text-input input, textarea {
-  width: 50%;
+  width: 60%;
+}
+
+.hide {
+  display: none;
+}
+
+.success {
+  font-family: 'Courier New', Courier, monospace;
+  font-weight: bold;
 }
 
 .buttons {
@@ -100,6 +109,10 @@ header {
   transform:translateY(2px);
 }
 
+.btn.btn-choose-file.selected {
+  background-color: green;
+  color: white;
+}
 
 .polaroid {
   display: flex;

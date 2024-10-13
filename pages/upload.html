@@ -25,19 +25,23 @@
           <button class="btn btn-upload" type="submit">Incarca</button>
         </div>
         <div class="text-input">
-          <input
-            type="text"
-            id="nameInput"
-            placeholder="Nume"
-            required
-          />
-          <textarea id="descriptionInput" maxlength="100" rows="5" cols="40" placeholder="Adauga un mesaj (optional)"></textarea>
+          <input type="text" id="nameInput" placeholder="Nume" required />
+          <textarea
+            id="descriptionInput"
+            maxlength="100"
+            rows="5"
+            cols="40"
+            placeholder="Adauga un mesaj (optional)"
+          ></textarea>
         </div>
       </form>
       <div class="progress-container">
         <progress id="progressBar" value="0" max="100"></progress>
       </div>
-
+      <div class="success hide">
+        <p>Poza incarcata cu succes!</p>
+        <p>O sa apara aici in cateva minute...</p>
+      </div>
     </header>
     <main>
       <div id="gallery"></div>

@@ -20,6 +20,22 @@ const nameInput = document.getElementById("nameInput");
 const descriptionInput = document.getElementById("descriptionInput");
 const uploadForm = document.getElementById("uploadForm");
 const progressBar = document.getElementById("progressBar");
+const chooseFileBtn = document.querySelector('.btn-choose-file');
+const successText = document.querySelector(".success");
+
+
+
+
+fileInput.addEventListener('change', () => {
+  if (fileInput.files.length > 0) {
+    chooseFileBtn.classList.add('selected');
+    chooseFileBtn.textContent = "Poza selectata"
+  } else {
+    chooseFileBtn.classList.remove('selected');
+  }
+});
+
+
 
 uploadForm.addEventListener("submit", async (e) => {
   e.preventDefault();
@@ -59,7 +75,10 @@ uploadForm.addEventListener("submit", async (e) => {
         createdAt: serverTimestamp(),
       });
 
-      alert("Poza incarcata cu succes!");
+      // alert("Poza incarcata cu succes!");
+      successText.classList.remove('hide')
+      chooseFileBtn.classList.remove('selected');
+      chooseFileBtn.textContent = "Alege o poza"
       progressBar.style.display = "none";
       progressBar.value = 0;
       fileInput.value = "";
