@@ -139,11 +139,6 @@ body {
   background-color: #272727;
 }
 
-.main-nav-link.nav-cta:hover,
-.main-nav-link.nav-cta:active {
-  background-color: #c67f43;
-}
-
 .btn-mobile-nav {
   border: none;
   background: none;

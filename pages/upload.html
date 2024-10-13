@@ -3,7 +3,7 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" href="/css/upload.css">
+    <link rel="stylesheet" href="/css/upload.css" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
@@ -17,8 +17,13 @@
     <header>
       <h1>Scriem povestea impreuna</h1>
       <form id="uploadForm" enctype="multipart/form-data">
-        <input class="btn" type="file" id="fileInput" accept="image/*" />
-        <button class="btn btn-upload" type="submit">Incarca</button>
+        <div class="buttons">
+          <input type="file" id="fileInput" accept="image/*" />
+          <label for="fileInput" class="btn btn-choose-file"
+            >Alege o poza</label
+          >
+          <button class="btn btn-upload" type="submit">Incarca</button>
+        </div>
       </form>
       <progress id="progressBar" value="0" max="100"></progress>
       <h2>Ultimele 10 poze</h2>

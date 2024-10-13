@@ -29,6 +29,7 @@ body {
 
 header {
     color: #fff;
+    text-align: center;
 }
 
 #progressBar {
@@ -36,6 +37,7 @@ header {
     height: 20px;
     margin-top: 10px;
     display: none;
+    align-self: center;
 }
 
 #gallery {
@@ -55,3 +57,57 @@ header {
   margin: 1rem auto;
 }
 
+#fileInput {
+  display: none;
+}
+
+.buttons {
+  display: flex;
+  justify-content: center;
+  gap: 1.5rem;
+}
+
+.btn {
+  font-family: 'Courier New', Courier, monospace;
+  padding: 1.2rem;
+  border-radius: 14px;
+}
+
+.btn-choose-file {
+  background-color: #333;
+}
+
+.btn:active {
+  transform:translateY(2px);
+}
+
+.polaroid {
+  position: relative;
+  width: 250px;
+  background: white;
+  padding: 10px;
+  margin: 10px;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+  border-radius: 10px;
+}
+
+.polaroid img {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
+.polaroid .info {
+  padding: 10px;
+  text-align: center;
+  font-family: 'Arial', sans-serif;
+}
+
+.polaroid .info .name {
+  font-weight: bold;
+}
+
+.polaroid .info .description {
+  font-style: italic;
+  font-size: 14px;
+}
