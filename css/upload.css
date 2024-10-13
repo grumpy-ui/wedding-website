@@ -37,8 +37,15 @@ header {
     height: 20px;
     margin-top: 10px;
     display: none;
-    align-self: center;
 }
+
+.progress-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;                    
+}
+
+
 
 #gallery {
   display: grid;
@@ -61,6 +68,18 @@ header {
   display: none;
 }
 
+.text-input {
+  margin-top: 2rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1.5rem;
+}
+
+.text-input input, textarea {
+  width: 50%;
+}
+
 .buttons {
   display: flex;
   justify-content: center;
@@ -81,33 +100,58 @@ header {
   transform:translateY(2px);
 }
 
+
 .polaroid {
-  position: relative;
-  width: 250px;
-  background: white;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 300px;
   padding: 10px;
-  margin: 10px;
-  box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+  background-color: white;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
   border-radius: 10px;
+  margin: 15px;
+  position: relative;
+  text-align: center;
+  overflow: hidden;
 }
 
 .polaroid img {
   width: 100%;
   height: auto;
-  display: block;
+  border-radius: 5px;
+  object-fit: cover;
 }
 
 .polaroid .info {
   padding: 10px;
-  text-align: center;
-  font-family: 'Arial', sans-serif;
+  background-color: #fff;
+  width: 100%;
+  border-radius: 5px;
 }
 
 .polaroid .info .name {
   font-weight: bold;
+  font-family: sans-serif;
+  font-size: 18px;
+  color: #333;
+}
+
+.polaroid .name {
+  margin-bottom: 10px;
 }
 
 .polaroid .info .description {
-  font-style: italic;
   font-size: 14px;
+  color: #666;
+  font-style: italic;
+  font-family: sans-serif;
+}
+
+
+#gallery {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 20px;
 }

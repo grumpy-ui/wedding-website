@@ -16,13 +16,21 @@ import {
 } from "https://www.gstatic.com/firebasejs/10.13.2/firebase-firestore.js";
 
 const fileInput = document.getElementById("fileInput");
+const nameInput = document.getElementById("nameInput");
+const descriptionInput = document.getElementById("descriptionInput");
 const uploadForm = document.getElementById("uploadForm");
 const progressBar = document.getElementById("progressBar");
 
 uploadForm.addEventListener("submit", async (e) => {
   e.preventDefault();
+  
   const file = fileInput.files[0];
-  if (!file) return alert("Te rog sa alegi o poza.");
+  const name = nameInput.value;
+  const description = descriptionInput.value || "";
+
+  if (!file || !name) {
+    return alert("Please upload a picture and enter your name.");
+  }
 
   progressBar.style.display = "block";
 
@@ -42,9 +50,11 @@ uploadForm.addEventListener("submit", async (e) => {
     async () => {
       const downloadURL = await getDownloadURL(uploadTask.snapshot.ref);
 
-      // Store image metadata in Firestore with the public download URL
+      // Store image metadata in Firestore with the public download URL, name, and description
       await addDoc(collection(db, "photos"), {
         url: downloadURL,
+        name: name,
+        description: description,
         status: "pending",
         createdAt: serverTimestamp(),
       });
@@ -53,6 +63,8 @@ uploadForm.addEventListener("submit", async (e) => {
       progressBar.style.display = "none";
       progressBar.value = 0;
       fileInput.value = "";
+      nameInput.value = "";
+      descriptionInput.value = "";
 
       loadLast10Images();
     }
@@ -73,9 +85,31 @@ const loadLast10Images = async () => {
   const snapshot = await getDocs(q);
 
   snapshot.forEach((doc) => {
+    const data = doc.data();
+    const polaroid = document.createElement("div");
+    polaroid.classList.add("polaroid");
+
     const img = document.createElement("img");
-    img.src = doc.data().url;
-    gallery.appendChild(img);
+    img.src = data.url;
+    polaroid.appendChild(img);
+
+    const infoDiv = document.createElement("div");
+    infoDiv.classList.add("info");
+
+    const nameDiv = document.createElement("div");
+    nameDiv.classList.add("name");
+    nameDiv.textContent = data.name;
+    infoDiv.appendChild(nameDiv);
+
+    if (data.description) {
+      const descriptionDiv = document.createElement("div");
+      descriptionDiv.classList.add("description");
+      descriptionDiv.textContent = data.description;
+      infoDiv.appendChild(descriptionDiv);
+    }
+
+    polaroid.appendChild(infoDiv);
+    gallery.appendChild(polaroid);
   });
 };
 

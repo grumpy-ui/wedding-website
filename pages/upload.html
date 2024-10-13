@@ -24,9 +24,20 @@
           >
           <button class="btn btn-upload" type="submit">Incarca</button>
         </div>
+        <div class="text-input">
+          <input
+            type="text"
+            id="nameInput"
+            placeholder="Nume"
+            required
+          />
+          <textarea id="descriptionInput" maxlength="100" rows="5" cols="40" placeholder="Adauga un mesaj (optional)"></textarea>
+        </div>
       </form>
-      <progress id="progressBar" value="0" max="100"></progress>
-      <h2>Ultimele 10 poze</h2>
+      <div class="progress-container">
+        <progress id="progressBar" value="0" max="100"></progress>
+      </div>
+
     </header>
     <main>
       <div id="gallery"></div>
