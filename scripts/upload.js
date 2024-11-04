@@ -81,6 +81,7 @@ uploadForm.addEventListener("submit", async (e) => {
       fileInput.value = "";
       nameInput.value = "";
       descriptionInput.value = "";
+      document.activeElement.blur();
     }
   );
 });
