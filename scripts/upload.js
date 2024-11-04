@@ -94,7 +94,6 @@ const loadLast10Images = () => {
     limit(10)
   );
 
-  // Real-time listener for approved images
   onSnapshot(q, (snapshot) => {
     gallery.innerHTML = "";
 

@@ -1,104 +1,86 @@
-import { db, storage } from '/backend/firebase.js';
-import { collection, query, where, orderBy, limit, getDocs, doc, updateDoc, deleteDoc } from "https://www.gstatic.com/firebasejs/10.13.2/firebase-firestore.js";
-import { ref, deleteObject } from "https://www.gstatic.com/firebasejs/10.13.2/firebase-storage.js";
+import { db } from "/backend/firebase.js";
+import { collection, query, where, orderBy, onSnapshot, updateDoc, doc, deleteDoc } from "https://www.gstatic.com/firebasejs/10.13.2/firebase-firestore.js";
 
-// Function to load images for moderation
-const loadImagesForModeration = async () => {
+// Function to load and listen for pending images in real-time
+const loadPendingImages = () => {
   const moderationGallery = document.getElementById("moderationGallery");
-  moderationGallery.innerHTML = "";
 
-  // Query the last 10 uploaded images
+  // Query Firestore for pending photos
   const q = query(
     collection(db, "photos"),
-    orderBy("createdAt", "desc"),
-    limit(10)
+    where("status", "==", "pending"),
+    orderBy("createdAt", "desc")
   );
 
-  const snapshot = await getDocs(q);
+  // Real-time listener for pending images
+  onSnapshot(q, (snapshot) => {
+    moderationGallery.innerHTML = "";
 
-  snapshot.forEach((docSnapshot) => {
-    const data = docSnapshot.data();
-    const imgContainer = document.createElement("div");
-    imgContainer.className = "image-container";
+    snapshot.forEach((doc) => {
+      const data = doc.data();
+      const polaroid = document.createElement("div");
+      polaroid.classList.add("polaroid");
 
-    const img = document.createElement("img");
-    img.src = data.url;
+      const img = document.createElement("img");
+      img.src = data.url;
+      polaroid.appendChild(img);
 
-    if (data.status === "pending") {
-      // Create Approve and Reject buttons for pending pictures
-      const approveButton = document.createElement("button");
-      approveButton.textContent = "Approve";
-      approveButton.onclick = () => approveImage(docSnapshot.id);
+      const infoDiv = document.createElement("div");
+      infoDiv.classList.add("info");
 
-      const rejectButton = document.createElement("button");
-      rejectButton.textContent = "Reject";
-      rejectButton.onclick = () => rejectImage(docSnapshot.id);
+      const nameDiv = document.createElement("div");
+      nameDiv.classList.add("name");
+      nameDiv.textContent = data.name;
+      infoDiv.appendChild(nameDiv);
 
-      imgContainer.appendChild(img);
-      imgContainer.appendChild(approveButton);
-      imgContainer.appendChild(rejectButton);
-    } else if (data.status === "approved") {
-      // Create Delete button for approved pictures
-      const deleteButton = document.createElement("button");
-      deleteButton.textContent = "Delete";
-      deleteButton.onclick = () => deleteImage(docSnapshot.id, data.filename);
+      if (data.description) {
+        const descriptionDiv = document.createElement("div");
+        descriptionDiv.classList.add("description");
+        descriptionDiv.textContent = data.description;
+        infoDiv.appendChild(descriptionDiv);
+      }
 
-      imgContainer.appendChild(img);
-      imgContainer.appendChild(deleteButton);
-    }
+      // Create approve and reject buttons
+      const approveBtn = document.createElement("button");
+      approveBtn.textContent = "Approve";
+      approveBtn.addEventListener("click", () => {
+        approveImage(doc.id);
+      });
 
-    moderationGallery.appendChild(imgContainer);
+      const rejectBtn = document.createElement("button");
+      rejectBtn.textContent = "Reject";
+      rejectBtn.addEventListener("click", () => {
+        rejectImage(doc.id);
+      });
+
+      const btnContainer = document.createElement("div");
+      btnContainer.classList.add("moderation-buttons");
+      btnContainer.appendChild(approveBtn);
+      btnContainer.appendChild(rejectBtn);
+
+      polaroid.appendChild(infoDiv);
+      polaroid.appendChild(btnContainer);
+      moderationGallery.appendChild(polaroid);
+    });
   });
 };
 
 // Function to approve an image
-const approveImage = async (docId) => {
-  try {
-    const docRef = doc(db, "photos", docId);
-    await updateDoc(docRef, { status: "approved" });
-    console.log("Image approved successfully");
+const approveImage = async (id) => {
+  const photoRef = doc(db, "photos", id);
+  await updateDoc(photoRef, { status: "approved" });
+  alert("Image approved!");
+};
 
-    // Reload the moderation gallery after approving
-    loadImagesForModeration();
-  } catch (error) {
-    console.error("Error approving image: ", error);
+// Function to reject an image (delete it or update status)
+const rejectImage = async (id) => {
+  const confirmDelete = confirm("Are you sure you want to reject this image?");
+  if (confirmDelete) {
+    const photoRef = doc(db, "photos", id);
+    await deleteDoc(photoRef);
+    alert("Image rejected and deleted!");
   }
 };
 
-// Function to reject an image
-const rejectImage = async (docId) => {
-  try {
-    const docRef = doc(db, "photos", docId);
-    await updateDoc(docRef, { status: "rejected" });
-    console.log("Image rejected successfully");
-
-    // Reload the moderation gallery after rejecting
-    loadImagesForModeration();
-  } catch (error) {
-    console.error("Error rejecting image: ", error);
-  }
-};
-
-// Function to delete the image from both Firestore and Firebase Storage
-const deleteImage = async (docId, fileName) => {
-  try {
-    // Delete the file from Firebase Storage
-    const fileRef = ref(storage, `uploads/${fileName}`);
-    await deleteObject(fileRef).catch((error) => {
-      console.error("Error deleting file from storage:", error);
-    });
-
-    // Delete the document from Firestore
-    await deleteDoc(doc(db, "photos", docId)).catch((error) => {
-      console.error("Error deleting document from Firestore:", error);
-    });
-
-    // Refresh the gallery after deletion
-    loadImagesForModeration();
-  } catch (error) {
-    console.error("Error deleting image: ", error);
-  }
-};
-
-// Load the images for moderation when the page loads
-loadImagesForModeration();
+// Call the function to start listening for changes
+loadPendingImages();
