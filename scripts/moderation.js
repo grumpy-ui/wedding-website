@@ -1,20 +1,20 @@
 import { db } from "/backend/firebase.js";
-import { collection, query, where, orderBy, onSnapshot, updateDoc, doc, deleteDoc } from "https://www.gstatic.com/firebasejs/10.13.2/firebase-firestore.js";
+import { collection, query, orderBy, limit, onSnapshot, deleteDoc, doc } from "https://www.gstatic.com/firebasejs/10.13.2/firebase-firestore.js";
 
-// Function to load and listen for pending images in real-time
-const loadPendingImages = () => {
+// Function to load and listen for the last 20 images in real-time
+const loadLast20Images = () => {
   const moderationGallery = document.getElementById("moderationGallery");
 
-  // Query Firestore for pending photos
+  // Query to fetch the last 20 images
   const q = query(
     collection(db, "photos"),
-    where("status", "==", "pending"),
-    orderBy("createdAt", "desc")
+    orderBy("createdAt", "desc"),
+    limit(20)
   );
 
-  // Real-time listener for pending images
+  // Real-time listener for the images
   onSnapshot(q, (snapshot) => {
-    moderationGallery.innerHTML = "";
+    moderationGallery.innerHTML = ""; // Clear the gallery before adding new images
 
     snapshot.forEach((doc) => {
       const data = doc.data();
@@ -40,23 +40,16 @@ const loadPendingImages = () => {
         infoDiv.appendChild(descriptionDiv);
       }
 
-      // Create approve and reject buttons
-      const approveBtn = document.createElement("button");
-      approveBtn.textContent = "Approve";
-      approveBtn.addEventListener("click", () => {
-        approveImage(doc.id);
-      });
-
-      const rejectBtn = document.createElement("button");
-      rejectBtn.textContent = "Reject";
-      rejectBtn.addEventListener("click", () => {
-        rejectImage(doc.id);
+      // Create a delete button
+      const deleteBtn = document.createElement("button");
+      deleteBtn.textContent = "Delete";
+      deleteBtn.addEventListener("click", () => {
+        deleteImage(doc.id);
       });
 
       const btnContainer = document.createElement("div");
       btnContainer.classList.add("moderation-buttons");
-      btnContainer.appendChild(approveBtn);
-      btnContainer.appendChild(rejectBtn);
+      btnContainer.appendChild(deleteBtn);
 
       polaroid.appendChild(infoDiv);
       polaroid.appendChild(btnContainer);
@@ -65,22 +58,15 @@ const loadPendingImages = () => {
   });
 };
 
-// Function to approve an image
-const approveImage = async (id) => {
-  const photoRef = doc(db, "photos", id);
-  await updateDoc(photoRef, { status: "approved" });
-  alert("Image approved!");
-};
-
-// Function to reject an image (delete it or update status)
-const rejectImage = async (id) => {
-  const confirmDelete = confirm("Are you sure you want to reject this image?");
+// Function to delete an image
+const deleteImage = async (id) => {
+  const confirmDelete = confirm("Are you sure you want to delete this image?");
   if (confirmDelete) {
     const photoRef = doc(db, "photos", id);
     await deleteDoc(photoRef);
-    alert("Image rejected and deleted!");
+    alert("Image deleted!");
   }
 };
 
 // Call the function to start listening for changes
-loadPendingImages();
+loadLast20Images();

@@ -71,6 +71,9 @@ uploadForm.addEventListener("submit", async (e) => {
       });
 
       successText.classList.remove('hide');
+      setTimeout(() => {
+        successText.classList.add('hide');
+      }, 5000);
       chooseFileBtn.classList.remove('selected');
       chooseFileBtn.textContent = "Alege o poza";
       progressBar.style.display = "none";
@@ -91,7 +94,7 @@ const loadLast10Images = () => {
     collection(db, "photos"),
     where("status", "==", "approved"),
     orderBy("createdAt", "desc"),
-    limit(10)
+    limit(20)
   );
 
   onSnapshot(q, (snapshot) => {
